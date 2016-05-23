@@ -34,53 +34,37 @@ exports.show_edit = function (req, res, next) {
   }
 }
 
-// UPDATE // (INCOMPLETO)
+// UPDATE // (WITHOUT TEST)
 exports.update = function (req, res, next) {
-  var id = req.params.id
-
-  var nombre      = req.body.nombre       || ''
-  var descripcion = req.body.descripcion  || ''
-  var precio      = req.body.precio       || ''
-
+  var id = req.params.id;
+  var name = req.body.name || '';
+  var link = req.body.link || '';
   // Validemos que nombre o descripcion no vengan vacíos
   if ((nombre=== '') || (descripcion === '')) {
-    console.log('ERROR: Campos vacios')
-    return res.send('Hay campos vacíos, revisar')
+    console.log('ERROR: Campos vacios');
+    return res.send('Hay campos vacíos, revisar');
   }
-
-  // Validemos que el precio sea número
-  if (isNaN(precio)) {
-    console.log('ERROR: Precio no es número')
-    return res.send('Precio no es un número !!!!!')
-  }
-
-  Producto.findById(id, gotProduct)
-
-  function gotProduct (err, producto) {
+  Banda.findById(id, gotBand);
+  function gotBand (err, banda) {
     if (err) {
-      console.log(err)
-      return next(err)
+      console.log(err);
+      return next(err);
     }
-
-    if (!producto) {
-      console.log('ERROR: ID no existe')
-      return res.send('ID Inválida!')
+    if (!banda) {
+      console.log('ERROR: ID no existe');
+      return res.send('ID Inválida!');
     } else {
-      producto.nombre       = nombre
-      producto.descripcion  = descripcion
-      producto.precio       = precio
-
-      producto.save(onSaved)
+      banda.name   = name;
+      banda.link   = link;
+      banda.save(onSaved);
     }
   }
-
   function onSaved (err) {
     if (err) {
-      console.log(err)
-      return next(err)
+      console.log(err);
+      return next(err);
     }
-
-    return res.redirect('/producto/' + id)
+    return res.redirect('/banda/' + id)
   }
 }
 
