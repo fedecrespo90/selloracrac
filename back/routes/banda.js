@@ -92,44 +92,31 @@ exports.remove = function (req, res, next) {
   }
 }
 
-// CREATE // (INCOMPLETO) 
+// CREATE // (WITHOUT TEST) 
 exports.create = function (req, res, next) {
   if (req.method === 'GET') {
-    return res.render('show_edit', {title: 'Nuevo Producto', producto: {}})
+    //return res.render('show_edit', {title: 'Nuevo Producto', banda: {}});
   } else if (req.method === 'POST') {
     // Obtenemos las variables y las validamos
-    var nombre      = req.body.nombre       || ''
-    var descripcion = req.body.descripcion  || ''
-    var precio      = req.body.precio       || ''
-
-    // Validemos que nombre o descripcion no vengan vacíos
-    if ((nombre=== '') || (descripcion === '')) {
-      console.log('ERROR: Campos vacios')
-      return res.send('Hay campos vacíos, revisar')
+    var name = req.body.name || '';
+    var bio  = req.body.bio  || '';
+    // Validemos que name o bio no vengan vacíos
+    if ((name=== '') || (bio === '')) {
+      console.log('ERROR: Campos vacios');
+      return res.send('Hay campos vacíos, revisar');
     }
-
-    // Validemos que el precio sea número
-    if (isNaN(precio)) {
-      console.log('ERROR: Precio no es número')
-      return res.send('Precio no es un número !!!!!')
-    }
-
     // Creamos el documento y lo guardamos
-    var producto = new Producto({
-        nombre        : nombre
-      , descripcion   : descripcion
-      , precio        : precio
+    var banda = new Producto({
+        name  : name,
+        bio   : bio,
     })
-
-    producto.save(onSaved)
-
+    banda.save(onSaved);
     function onSaved (err) {
       if (err) {
-        console.log(err)
-        return next(err)
+        console.log(err);
+        return next(err);
       }
-
-      return res.redirect('/')
+      return res.redirect('/');
     }
   }  
 }
