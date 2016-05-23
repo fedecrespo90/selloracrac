@@ -1,0 +1,15 @@
+{
+  "name": "sello_racrac",
+  "version": "0.0.1",
+  "description": "This is the application of the RACRAC label",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "author": "Fede Crespo, Martin Palmieri & Flor Crespo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.13.4",
+    "mongoose": "4.4.19"
+  }
+}
