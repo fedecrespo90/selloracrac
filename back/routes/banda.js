@@ -68,33 +68,27 @@ exports.update = function (req, res, next) {
   }
 }
 
-// REMOVE //  (INCOMPLETO)
+// REMOVE //  (WITHOUT TEST)
 exports.remove = function (req, res, next) {
-  var id = req.params.id
-
-  Producto.findById(id, gotProduct)
-
-  function gotProduct (err, producto) {
+  var id = req.params.id;
+  Banda.findById(id, gotBand);
+  function gotBand (err, banda) {
     if (err) {
-      console.log(err)
-      return next(err)
+      console.log(err);
+      return next(err);
     }
-
-    if (!producto) {
-      return res.send('Invalid ID. (De algún otro lado la sacaste tú...)')
+    if (!banda) {
+      return res.send('Invalid ID. (De algún otro lado la sacaste tú...)');
     }
-
-    // Tenemos el producto, eliminemoslo
-    producto.remove(onRemoved)
+    // Tenemos el banda, eliminemoslo
+    banda.remove(onRemoved);
   }
-
   function onRemoved (err) {
     if (err) {
-      console.log(err)
-      return next(err)
+      console.log(err);
+      return next(err);
     }
-
-    return res.redirect('/')
+    return res.redirect('/');
   }
 }
 
