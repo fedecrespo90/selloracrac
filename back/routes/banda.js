@@ -38,7 +38,7 @@ exports.show_edit = function (req, res, next) {
 exports.update = function (req, res, next) {
   var id = req.params.id;
   var name = req.body.name || '';
-  var link = req.body.link || '';
+  var bio = req.body.bio || '';
   // Validemos que nombre o descripcion no vengan vacíos
   if ((nombre=== '') || (descripcion === '')) {
     console.log('ERROR: Campos vacios');
@@ -55,7 +55,7 @@ exports.update = function (req, res, next) {
       return res.send('ID Inválida!');
     } else {
       banda.name   = name;
-      banda.link   = link;
+      banda.bio    = bio;
       banda.save(onSaved);
     }
   }
