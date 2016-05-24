@@ -68,7 +68,7 @@ exports.update = function (req, res, next) {
   }
 }
 
-// REMOVE //  (WITHOUT TEST)
+// REMOVE //
 exports.remove = function (req, res, next) {
   var id = req.params.id;
   Banda.findById(id, gotBand);
@@ -77,22 +77,24 @@ exports.remove = function (req, res, next) {
       console.log(err);
       return next(err);
     }
-    if (!banda) {
-      return res.send('Invalid ID. (De algún otro lado la sacaste tú...)');
+    if (!banda == true) {
+      return next('Invalid ID.');
+    } else {
+      // Tenemos el banda, eliminemoslo
+      banda.remove(onRemoved);
+      return next('Band was removed!');
     }
-    // Tenemos el banda, eliminemoslo
-    banda.remove(onRemoved);
   }
   function onRemoved (err) {
     if (err) {
       console.log(err);
       return next(err);
     }
-    return res.redirect('/');
+    //return res.redirect('/');
   }
 }
 
-// CREATE // (WITHOUT TEST) 
+// CREATE // (WITHOUT TEST)
 exports.create = function (req, res, next) {
   if (req.method === 'GET') {
     //return res.render('show_edit', {title: 'Nuevo Producto', banda: {}});
@@ -118,5 +120,5 @@ exports.create = function (req, res, next) {
       }
       return res.redirect('/');
     }
-  }  
+  }
 }
