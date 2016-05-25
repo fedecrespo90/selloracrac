@@ -6,12 +6,17 @@
 	"records": [
 		{
 			"name": "Invasion de gatos",
-			"link": "https://www.youtube.com/watch?v=GKcsRxC19Es"
+			"tracks": [
+				{
+					"name": "Perdon lucho",
+					"file": "perdon-lucho.mp3"
+				},
+				{
+					"name": "Hay videos de tu abuelo pensando lo mismo",
+					"file": "hay-videos.mp3"
+				}
+			]
 		},
-		{
-			"name": "Los mas grandes momentos de Mauro Viale",
-			"link": "https://www.youtube.com/watch?v=T7SM1o-w0-s"
-		}
 	],
 	"video": "link-video",
 	"links": [
