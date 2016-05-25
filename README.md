@@ -2,7 +2,7 @@
 ## Stack:
 * MongoDB
 * Node.js / Express.js
-* Angular *
+* Angular 
 <h3>Installation:</h3>
 * Go to: [MongoDB](https://www.mongodb.org/dl/win32/i386)
 * And go to: [Node.js](https://nodejs.org/en/download/)
