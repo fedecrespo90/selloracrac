@@ -4,12 +4,12 @@
 * Node.js / Express.js
 * Angular
 <h3>Installation:</h3>
-* Go to: [MongoDB](https://www.mongodb.org/dl/win32/i386)
-* And go to: [Node.js](https://nodejs.org/en/download/)
-* Create this folder's path: 'C:/data/db' (for MongoDB's database)
+* Go to: [MongoDB](https://www.mongodb.org/dl/win32/i386), and download the installation file
+* And go to: [Node.js](https://nodejs.org/en/download/), and download the installation file
+* Create this folder's path: 'C:/data/db' (for MongoDB)
 * Now, in another folder, clone the repo: _git clone https://github.com/fedecrespo90/selloracrac_
 * Place on app/ folder run: _npm install_
-###Setting Environment Variables:
+<h3>Setting Environment Variables:</h3>
 * Go to properties of Computer
 * Click on 'Advanced system settings'
 * Click on Environment Variables button
