@@ -1,5 +1,54 @@
-li {
-   list-style-type: none;
-   display:inline;
-   margin-right: 15px;
+* {
+  font-family: 'Roboto', sans-serif;	
+}
+
+.nav a {
+  color: #444;	
+}
+
+.racrac-nav {
+  border-radius:0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.card h1.card-title {
+  color: #444;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.card .card-image {
+  position: relative;
+  overflow: hidden;
+}
+.card .card-image img {
+  background-clip: padding-box;
+  position: relative;
+  z-index: -1;
+}
+
+.card .card-content {
+  padding: 16px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.card .card-content p {
+  margin: 0;
+  padding: 10px 0;
+  color: inherit;
+}
+.card .card-content span.card-title {
+  line-height: 48px;
 }

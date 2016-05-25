@@ -1,10 +1,43 @@
-<h4>Bandas:</h4>
+<!-- <div class="row">
+	<div class="form-group">
+	  <label class="control-label" for="inputSmall">Buscar:</label>
+	  <input class="form-control input-sm" type="text" id="inputSmall" ng-model="searchText">
+	</div>	
+	<p ng-hide="searchText.length">Nothing here!</p>
+</div> -->
 <div class="row">
-  <div class="item col-md-4" ng-repeat="banda in bandas">
-      <p><strong>{{ banda.name }}</strong></p>
-      <p>{{ banda.bio }}</p>
-      <div class="" ng-repeat="prod in banda.production">
-      	<a href="{{ prod.link }}" target="_blank"><strong>{{ prod.name }}</strong></a>
-      </div>
-  </div>
+	<div class="col-md-4">
+	    <div class="input-group">
+	        <input type="text" class="form-control input-lg" placeholder="Buscar" ng-model="searchText" />
+	        <span class="input-group-btn">
+	            <button class="btn btn-info btn-lg" type="button">
+	                <i class="glyphicon glyphicon-search"></i>
+	            </button>
+	        </span>
+	    </div>
+    </div>
+</div>
+<div class="row">
+<!--   <div class="item col-md-4" ng-repeat="banda in bandas">
+	<div class="panel panel-default">
+	  <div class="panel-heading">{{ banda.name }}</div>
+	  <div class="panel-body">
+	    <p>{{ banda.bio }}</p>
+	    <div class="" ng-repeat="prod in banda.production">
+	      <a href="{{ prod.link }}" target="_blank"><strong>{{ prod.name }}</strong></a>
+	    </div>
+	  </div>
+	</div>
+  </div> -->
+	<div class="col-md-4" ng-repeat="banda in bandas | filter:searchText">
+	    <div class="card">
+	        <div class="card-image">
+	            <img class="img-responsive" src="http://assets.rollingstone.com/assets/2014/gallery/30-most-embarrassing-rock-star-arrests-20140227/gg-allin-0351711/129586/_original/1035x813-ggallin-1800-1393446131.jpg">
+	        </div>        
+	        <div class="card-content">
+	        	<h1 class="card-title">{{ banda.name }}</h1>
+	            <p>{{banda.bio}}</p>
+	        </div>        
+	    </div>	    
+	</div>  
 </div>
