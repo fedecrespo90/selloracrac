@@ -17,6 +17,6 @@
 * Place on 'dumps' folder run the following command: _mongoimport --db sello --collection bandas name_of_json_file.json_
 <h3>Running the application:</h3>
 * Open CMD / Bash and type 'mongod' (maybe you have to run 'mongod --repair' to close a previous process)
-* In another CMD / Bash (place on app/ folder) run _node server.js__
+* In another CMD / Bash (place on app/ folder) run _node server.js_
 
 And that's it! :)
