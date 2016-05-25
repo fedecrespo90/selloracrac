@@ -18,5 +18,6 @@
 <h3>Running the application:</h3>
 * Open CMD / Bash and type 'mongod' (maybe you have to run 'mongod --repair' to close a previous process)
 * In another CMD / Bash (place on app/ folder) run _node server.js_
+* In your browser type _http://localhost:3000_
 
 And that's it! :)
