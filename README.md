@@ -14,7 +14,7 @@
 * Click on 'Advanced system settings'
 * Click on Environment Variables button
 * Selecting PATH option, click on Edit button
-* Paste the path of the files of MongoDB that you installed previously and close it with a ';'
+* Paste the path of the executable files of MongoDB that you installed previously and close it with a ';'
 <h3>Importing database dumps:</h3>
 * Place on 'dumps' folder run the following command: _mongoimport --db sello --collection bandas name_of_json_file.json_
 <h3>Running the application:</h3>
