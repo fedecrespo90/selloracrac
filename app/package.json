@@ -1,7 +1,7 @@
 {
   "name": "sello_racrac",
   "version": "0.0.1",
-  "description": "This is the application of the RACRAC label",
+  "description": "This is the application of the RACRAC's label",
   "main": "server.js",
   "scripts": {
     "test": "node server.js"

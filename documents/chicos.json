@@ -1,10 +1,37 @@
 {
-	"name": "Los chicos bien",
+	"name":  "Los chicos bien",
 	"bio": "Una vez estabamos re pillos...",
-	"production": [
+	"thumbnail": "foto-chiquita",
+	"cover": "foto-portada",
+	"records": [
 		{
 			"name": "Los chicos bien",
-			"link": "https://www.youtube.com/watch?v=Ux0KlpOewUw"
+			"tracks": [
+				{
+					"name": "Iaiaia",
+					"file": "iaiaia.mp3"
+				},
+				{
+					"name": "Bien",
+					"file": "bien.mp3"
+				}
+			]
 		}
-	]
+	],
+	"video": "link-video",
+	"links": [
+		{
+			"name": "Facebook",
+			"url": "http...."
+		},
+		{
+			"name": "Vimeo",
+			"url": "http..."
+		},
+		{
+			"name": "Tienda",
+			"url": "http..."
+		}
+	],
+	"ciudad": "Bahía Blanca"
 }

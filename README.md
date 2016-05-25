@@ -15,10 +15,11 @@
 * Click on Environment Variables button
 * Selecting PATH option, click on Edit button
 * Paste the path of the executable files of MongoDB that you installed previously and close it with a ';'
-<h3>Importing database documents:</h3>
+<h3>Creating local DB and Importing documents:</h3>
+* Open CMD / Bash and type 'mongod' (maybe you have to run 'mongod --repair' to close a previous process)
+* In another CMD / Bash type mongo and, then, the following commands: _use sello; db.createCollection("bandas");_
 * Place on 'documents' folder run the following command: _mongoimport --db sello --collection bandas name_of_json_file.json_
 <h3>Running the application:</h3>
-* Open CMD / Bash and type 'mongod' (maybe you have to run 'mongod --repair' to close a previous process)
 * In another CMD / Bash (place on app/ folder) run _node server.js_
 * In your browser type _http://localhost:3000_
 
