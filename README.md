@@ -14,10 +14,10 @@
 * Click on 'Advanced system settings'
 * Click on Environment Variables button
 * Selecting PATH option, click on Edit button
-* Paste the path of the executable files of MongoDB that you installed previously and close it with a ';'
+* Paste the path of the executable files of MongoDB (example: 'C:\Program Files (x86)\MongoDB\Server\3.0\bin;') that you installed previously and close it with a ';'
 <h3>Creating local DB and Importing documents:</h3>
 * Open CMD / Bash and type 'mongod' (maybe you have to run 'mongod --repair' to close a previous process)
-* In another CMD / Bash type mongo and, then, the following commands: _use sello; db.createCollection("bandas");_
+* In another CMD / Bash type 'mongo' and, then, the following commands: _use sello; db.createCollection("bandas");_
 * Place on 'documents' folder run the following command: _mongoimport --db sello --collection bandas name_of_json_file.json_
 <h3>Running the application:</h3>
 * In another CMD / Bash (place on app/ folder) run _node server.js_
