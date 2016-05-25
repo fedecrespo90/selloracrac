@@ -9,7 +9,7 @@
 * Create this folder's path: 'C:/data/db' (for MongoDB's database)
 * Now, in another folder, clone the repo: _git clone https://github.com/fedecrespo90/selloracrac_
 * Place on app/ folder run: _npm install_
-<h3>Setting Environment Variables:</h3>
+###Setting Environment Variables:
 * Go to properties of Computer
 * Click on 'Advanced system settings'
 * Click on Environment Variables button
