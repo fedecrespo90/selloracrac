@@ -4,9 +4,8 @@
 * Node.js / Express.js
 * Angular *
 <h3>Installation:</h3>
-* First of all you have to download and install this:
-* [MongoDB](https://www.mongodb.org/dl/win32/i386)
-* [Node.js](https://nodejs.org/en/download/)
+* Go to: [MongoDB](https://www.mongodb.org/dl/win32/i386)
+* And go to: [Node.js](https://nodejs.org/en/download/)
 * Create this folder's path: 'C:/data/db'
 <h3>Setting Environment Variables:</h3>
 * Go to properties of Computer
