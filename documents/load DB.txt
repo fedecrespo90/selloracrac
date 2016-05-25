@@ -1,2 +1,0 @@
-(parado sobre la carpeta 'dumps')
-mongoimport --db sello --collection bandas chicos.json
