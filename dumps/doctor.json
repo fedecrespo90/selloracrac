@@ -1,7 +1,9 @@
 {
 	"name":  "Doctor Simio",
 	"bio": "Todo inicia cuando...",
-	"production": [
+	"thumbnail": "foto-chiquita",
+	"cover": "foto-portada",
+	"records": [
 		{
 			"name": "Invasion de gatos",
 			"link": "https://www.youtube.com/watch?v=GKcsRxC19Es"
@@ -10,5 +12,21 @@
 			"name": "Los mas grandes momentos de Mauro Viale",
 			"link": "https://www.youtube.com/watch?v=T7SM1o-w0-s"
 		}
-	]
+	],
+	"video": "link-video",
+	"links": [
+		{
+			"name": "Facebook",
+			"url": "http...."
+		},
+		{
+			"name": "Vimeo",
+			"url": "http..."
+		},
+		{
+			"name": "Tienda",
+			"url": "http..."
+		}
+	],
+	"ciudad": "Bahía Blanca"
 }
