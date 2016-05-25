@@ -5,7 +5,7 @@
 * Angular
 <h3>Installation:</h3>
 * Go to: [MongoDB](https://www.mongodb.org/dl/win32/i386), and download the installation file
-* And go to: [Node.js](https://nodejs.org/en/download/), and download the installation file
+* Go to: [Node.js](https://nodejs.org/en/download/), and download the installation file
 * Create this folder's path: 'C:/data/db' (for MongoDB)
 * Now, in another folder, clone the repo: _git clone https://github.com/fedecrespo90/selloracrac_
 * Place on app/ folder run: _npm install_
