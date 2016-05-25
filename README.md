@@ -2,7 +2,7 @@
 ## Stack:
 * MongoDB
 * Node.js / Express.js
-* Angular 
+* Angular
 <h3>Installation:</h3>
 * Go to: [MongoDB](https://www.mongodb.org/dl/win32/i386)
 * And go to: [Node.js](https://nodejs.org/en/download/)
@@ -14,7 +14,7 @@
 * Selecting PATH option, click on Edit button
 * Paste the path of the files of MongoDB that you installed previously and close it with a ';'
 <h3>Importing database dumps:</h3>
-* Place on 'dumps' folder run the following command: _mongoimport --db sello --collection bandas name_of_json_file.json__
+* Place on 'dumps' folder run the following command: _mongoimport --db sello --collection bandas name_of_json_file.json_
 <h3>Running the application:</h3>
 * Open CMD / Bash and type 'mongod' (maybe you have to run 'mongod --repair' to close a previous process)
 * In another CMD / Bash (place on app/ folder) run _node server.js__
