@@ -16,7 +16,7 @@ exports.index = function (req, res, next) {
       console.log(err);
       return next();
     }
-    return res.send({bandas: bandas});
+    return res.json(bandas);
   }
 }
 
@@ -30,7 +30,7 @@ exports.show_edit = function (req, res, next) {
       console.log(err)
       return next(err)
     }
-    return res.send({banda:banda});
+    return res.json(banda);
   }
 }
 
