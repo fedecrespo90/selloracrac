@@ -7,7 +7,6 @@ var mongoose        = require('mongoose')
 var banda_schema = require('../models/bandas')
   , Banda = db.model('Banda', banda_schema);
 
-
 // INDEX //
 exports.index = function (req, res, next) {
   Banda.find(gotBands);
@@ -34,13 +33,13 @@ exports.show_edit = function (req, res, next) {
   }
 }
 
-// UPDATE // (WITHOUT TEST)
+// UPDATE //
 exports.update = function (req, res, next) {
   var id = req.params.id;
   var name = req.body.name || '';
   var bio = req.body.bio || '';
-  // Validemos que nombre o descripcion no vengan vacíos
-  if ((nombre=== '') || (descripcion === '')) {
+  // Validemos que name  o descripcion no vengan vacíos
+  if ((name === '') || (bio === '')) {
     console.log('ERROR: Campos vacios');
     return res.send('Hay campos vacíos, revisar');
   }
@@ -64,7 +63,7 @@ exports.update = function (req, res, next) {
       console.log(err);
       return next(err);
     }
-    return res.redirect('/banda/' + id)
+    return res.redirect('/');
   }
 }
 
@@ -94,7 +93,7 @@ exports.remove = function (req, res, next) {
   }
 }
 
-// CREATE // (WITHOUT TEST)
+// CREATE //
 exports.create = function (req, res, next) {
   if (req.method === 'GET') {
     //return res.render('show_edit', {title: 'Nuevo Producto', banda: {}});
@@ -108,10 +107,10 @@ exports.create = function (req, res, next) {
       return res.send('Hay campos vacíos, revisar');
     }
     // Creamos el documento y lo guardamos
-    var banda = new Producto({
+    var banda = new Banda({
         name  : name,
-        bio   : bio,
-    })
+        bio   : bio
+    });
     banda.save(onSaved);
     function onSaved (err) {
       if (err) {
