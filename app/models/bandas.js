@@ -10,6 +10,7 @@ var banda_schema = new Schema({
       cover : String,
       tracks: [{
         name  :  String,
+        num   :  Number,
         file  :  String
         }]
   }],

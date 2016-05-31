@@ -10,10 +10,12 @@
 			"tracks": [
 				{
 					"name": "La receta de Doctor Simio",
+					"num": 1,
 					"file": "la-receta.mp3"
 				},
 				{
 					"name": "Charlie aspira",
+					"num": 2,
 					"file": "charlie.mp3"
 				}
 			]

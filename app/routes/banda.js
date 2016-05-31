@@ -35,6 +35,13 @@ exports.update = function (req, res, next) {
   var id = req.params.id;
   var name = req.body.name || '';
   var bio = req.body.bio || '';
+  var thumbnail  = req.body.thumbnail  || '';
+  var cover  = req.body.cover  || '';
+  var records  = req.body.records  || '';
+  var video  = req.body.video  || '';
+  var links  = req.body.links  || '';
+  var ciudad  = req.body.ciudad  || '';
+
   if ((name === '') || (bio === '')) {
     console.log('ERROR: Campos vacios');
     return res.send('Hay campos vacíos, revisar');
@@ -51,6 +58,13 @@ exports.update = function (req, res, next) {
     } else {
       banda.name   = name;
       banda.bio    = bio;
+      banda.records = records;
+      banda.thumbnail  = thumbnail;
+      banda.cover  = cover;
+      banda.records  = records;
+      banda.video  = video;
+      banda.links  = links;
+      banda.ciudad  = ciudad;
       banda.save(onSaved);
     }
   }
@@ -95,13 +109,27 @@ exports.create = function (req, res, next) {
   } else if (req.method === 'POST') {
     var name = req.body.name || '';
     var bio  = req.body.bio  || '';
+    var records  = req.body.records  || '';
+    var thumbnail  = req.body.thumbnail  || '';
+    var cover  = req.body.cover  || '';
+    var records  = req.body.records  || '';
+    var video  = req.body.video  || '';
+    var links  = req.body.links  || '';
+    var ciudad  = req.body.ciudad  || '';
+
     if ((name=== '') || (bio === '')) {
       console.log('ERROR: Campos vacios');
       return res.send('Hay campos vacíos, revisar');
     }
     var banda = new Banda({
-        name  : name,
-        bio   : bio
+        name : name,
+        bio : bio,
+        records : records,
+        thumbnail : thumbnail,
+        cover : cover,
+        video : video,
+        links : links,
+        ciudad : ciudad
     });
     banda.save(onSaved);
     function onSaved (err) {
