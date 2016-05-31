@@ -10,10 +10,12 @@
 			"tracks": [
 				{
 					"name": "Iaiaia",
+					"num": 1,
 					"file": "iaiaia.mp3"
 				},
 				{
 					"name": "Bien",
+					"num": 2,
 					"file": "bien.mp3"
 				}
 			]
