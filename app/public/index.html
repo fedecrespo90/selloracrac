@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "Site">
   <head>
     <meta charset="utf-8">
     <title>RACRAC</title>
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body ng-app="Site">
+  <body ng-controller = "MainController as main">
     <nav class="navbar racrac-nav">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -26,21 +26,32 @@
             <li><a href="#/bandas">Bandas</a></li>
             <li><a href="#/contacto">Contacto</a></li>
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li ng-if="main.loggedIn"><a href="#/signup">Signup</a></li>
+            <li ng-if="main.loggedIn"><a href="#/">Hello {{main.user.username}}</a></li>
+            <li ng-if="main.loggedIn"><a href="#/" ng-click="main.doLogout()">Logout</a></li>
+          </ul>
         </div>
       </div>
     </nav>
     <div class="container-fluid">
       <div ng-view></div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular-route.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular-route.min.js"></script>
     <!--Module-->
     <script src="js/app.js"></script>
-    <!-- Controllers -->
-    <script src="js/controllers/HomeController.js"></script>
-    <script src="js/controllers/BandController.js"></script>
-    <script src="js/controllers/ContactController.js"></script>
+    <script src="js/app.routes.js"></script>
     <!-- Services -->
     <script src="js/services/bandas.js"></script>
+    <script src="js/services/authService.js"></script>
+    <script src="js/services/userService.js"></script>
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+    <script src="js/controllers/HomeController.js"></script>
+    <script src="js/controllers/BandController.js"></script>
+    <script src="js/controllers/userController.js"></script>
+    <script src="js/controllers/ContactController.js"></script>
+
   </body>
 </html>

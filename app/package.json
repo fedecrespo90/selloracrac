@@ -9,8 +9,10 @@
   "author": "Fede Crespo, Martin Palmieri & Flor Crespo",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "1.15.1",
     "express": "4.13.4",
+    "jsonwebtoken": "7.0.1",
     "mongoose": "4.4.19",
     "morgan": "1.7.0"
   }

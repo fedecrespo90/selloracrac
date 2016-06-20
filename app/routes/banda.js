@@ -1,9 +1,20 @@
-var mongoose        = require('mongoose')
-  , db_lnk          = 'mongodb://localhost/sello'
-  , db              = mongoose.createConnection(db_lnk);
+var User = require('../models/users');
+var Banda = require('../models/bandas');
+var config = require('../config');
+var secretKey = config.secretKey;
+var jsonwebtoken = require('jsonwebtoken');
 
-var banda_schema = require('../models/bandas')
-  , Banda = db.model('Banda', banda_schema);
+function createToken(user){
+	var token = jsonwebtoken.sign({
+		id: user._id,
+		name: user.name,
+		username: user.username
+	},secretKey, {
+		expiresIn: 1440
+	});
+
+	return token;
+}
 
 // INDEX //
 exports.index = function (req, res, next) {
@@ -122,6 +133,7 @@ exports.create = function (req, res, next) {
       return res.send('Hay campos vacíos, revisar');
     }
     var banda = new Banda({
+				creator: req.decoded.id,
         name : name,
         bio : bio,
         records : records,
@@ -140,4 +152,95 @@ exports.create = function (req, res, next) {
       return res.redirect('/');
     }
   }
+}
+
+// SIGNUP // ----------
+exports.signup = function(req, res) {
+  var user = new User({
+    name: req.body.name,
+    username: req.body.username,
+    password: req.body.password
+  });
+  var token = createToken(user);
+
+  user.save(function(err){
+    if (err) {
+      res.send(err);
+      return;
+    }
+    res.json({
+      success: true,
+      token: token,
+      message: 'User has been created!'
+    });
+  });
+}
+
+// USERS // ----------
+exports.users = function(req,res) {
+  User.find({}, function(err, users){
+    if(err){
+      res.send(err);
+      return;
+    }else{
+      res.json(users);
+    }
+  });
+}
+
+// LOGIN // ----------
+exports.login = function(req, res) {
+  User.findOne({
+    username: req.body.username
+  }).select('name username password').exec(function(err,user){
+    if(err) throw err;
+    if(!user){
+      res.send({message: "User doesnt exist"});
+    }else if(user){
+      var validPassword = user.comparePassword(req.body.password);
+      if(!validPassword){
+        res.send({message: "Invalid Password!"})
+      }else{
+        /////token
+        var token = createToken(user);
+        res.json({
+          success: true,
+          message: "Successfuly login!",
+          token: token
+        });
+      }
+    }
+  });
+}
+
+// AUTH // ----------
+exports.auth = function(req, res, next) {
+  console.log("Somebody just came to our app!");
+  var token = req.body.token || req.param('token') || req.headers['x-access-token'];
+  // check if token exist
+  if (token){
+    jsonwebtoken.verify(token, secretKey,function(err,decoded){
+      if(err){
+        res.status(403).send({success: false, message: "Failed to authenticate user"});
+      }else{
+        //
+        req.decoded = decoded;
+        next();
+      }
+    });
+  }else{
+    res.status(403).send({success: false, message: "No token provided"});
+  }
+}
+
+// ERR 404
+exports.err404 = function(req, res, next) {
+	res.status(404);
+	res.json({msg: "Wrong URL."});
+}
+
+// ERR 500
+exports.err500 = function (req, res, next) {
+	res.status(500);
+	res.json({msg: "Server error."})
 }
