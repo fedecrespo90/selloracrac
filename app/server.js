@@ -36,6 +36,7 @@ app.post('/api/signup', banda.signup);
 app.get('/api/users', banda.users);
 app.post('/api/login', banda.login);
 app.use(banda.auth);
+
 app.get('/api/me', function(req,res){
 	res.json(req.decoded);
 });
