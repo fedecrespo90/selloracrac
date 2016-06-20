@@ -16,7 +16,8 @@ angular.module('appRoutes', ['ngRoute'])
         templateUrl: 'js/views/login.html'
       })
       .when('/signup', {
-        templateUrl: 'js/views/signup.html'
+        templateUrl: 'js/views/signup.html',
+        controller: 'SignupController'
       })
       .otherwise({
         redirectTo: '/'
