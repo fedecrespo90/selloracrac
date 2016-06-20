@@ -23,6 +23,7 @@ angular.module('mainCtrl',[])
 					$location.path('/');
 				else
 					vm.error = data.message;
+					setTimeout(function(){$location.path('/');},5000);//////////
 			});
 	}
 	vm.doLogout = function(){
