@@ -1,6 +1,7 @@
-var Schema = require('mongoose').Schema
-
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 var banda_schema = new Schema({
+  creator: {type: Schema.Types.ObjectId, ref: 'User'},
   name        :   String,
   bio         :   String,
   thumbnail   :   String,
@@ -19,7 +20,8 @@ var banda_schema = new Schema({
     name : String,
     url  : String
   }],
-  ciudad : String
+  ciudad : String,
+  created: {type: Date, defauly: Date.now}
 });
 
-module.exports = banda_schema;
+module.exports = mongoose.model('Banda',banda_schema);

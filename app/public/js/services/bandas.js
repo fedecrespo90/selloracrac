@@ -1,5 +1,5 @@
 app.factory('bandas', ['$http', function($http) {
-  return $http.get('http://localhost:3000/api')
+  return $http.get('/api')
          .success(function(data) {
            return data;
          })
