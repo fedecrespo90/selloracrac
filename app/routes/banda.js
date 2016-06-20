@@ -16,17 +16,107 @@ function createToken(user){
 	return token;
 }
 
-// INDEX //
-exports.index = function (req, res, next) {
-  Banda.find(gotBands);
-  function gotBands (err, bandas) {
-    if (err) {
-      console.log(err);
-      return next();
-    }
-    return res.json(bandas);
-  }
+module.exports = function(app, express) {
+	var api = express.Router();
+
+	// ALL //
+	api.get('/all', function(req, res, next){
+		Banda.find(gotBands);
+		function gotBands (err, bandas) {
+			if (err) {
+				console.log(err);
+				return next();
+			}
+			return res.json(bandas);
+		}
+	});
+
+	// SIGNUP //
+	api.post('/signup', function(req, res) {
+		var user = new User({
+			name: req.body.name,
+			username: req.body.username,
+			password: req.body.password
+		});
+		var token = createToken(user);
+
+		user.save(function(err){
+			if (err) {
+				res.send(err);
+				return;
+			}
+			res.json({
+				success: true,
+				token: token,
+				message: 'User has been created!'
+			});
+		});
+	});
+
+	// USERS //
+	api.get('/users', function(req, res) {
+		User.find({}, function(err, users){
+			if(err){
+				res.send(err);
+				return;
+			}else{
+				res.json(users);
+			}
+		});
+	});
+
+	// LOGIN  //
+	api.post('/login', function(req, res) {
+		User.findOne({
+			username: req.body.username
+		}).select('name username password').exec(function(err,user){
+			if(err) throw err;
+			if(!user){
+				res.send({message: "User doesnt exist"});
+			}else if(user){
+				var validPassword = user.comparePassword(req.body.password);
+				if(!validPassword){
+					res.send({message: "Invalid Password!"})
+				}else{
+					/////token
+					var token = createToken(user);
+					res.json({
+						success: true,
+						message: "Successfuly login!",
+						token: token
+					});
+				}
+			}
+		});
+	});
+
+	api.use(function(req, res, next) {
+		console.log("Somebody just came to our app!");
+		var token = req.body.token || req.param('token') || req.headers['x-access-token'];
+		// check if token exist
+		if (token){
+			jsonwebtoken.verify(token, secretKey,function(err,decoded){
+				if(err){
+					res.status(403).send({success: false, message: "Failed to authenticate user"});
+				}else{
+					//
+					req.decoded = decoded;
+					next();
+				}
+			});
+		}else{
+			res.status(403).send({success: false, message: "No token provided"});
+		}
+	});
+
+	// ULTIMO //
+	api.get('/me', function(req,res){
+		res.json(req.decoded);
+	});
+	return api;
 }
+
+
 
 // SHOW_EDIT //
 exports.show_edit = function (req, res, next) {
@@ -151,85 +241,6 @@ exports.create = function (req, res, next) {
       }
       return res.redirect('/');
     }
-  }
-}
-
-// SIGNUP // ----------
-exports.signup = function(req, res) {
-  var user = new User({
-    name: req.body.name,
-    username: req.body.username,
-    password: req.body.password
-  });
-  var token = createToken(user);
-
-  user.save(function(err){
-    if (err) {
-      res.send(err);
-      return;
-    }
-    res.json({
-      success: true,
-      token: token,
-      message: 'User has been created!'
-    });
-  });
-}
-
-// USERS // ----------
-exports.users = function(req,res) {
-  User.find({}, function(err, users){
-    if(err){
-      res.send(err);
-      return;
-    }else{
-      res.json(users);
-    }
-  });
-}
-
-// LOGIN // ----------
-exports.login = function(req, res) {
-  User.findOne({
-    username: req.body.username
-  }).select('name username password').exec(function(err,user){
-    if(err) throw err;
-    if(!user){
-      res.send({message: "User doesnt exist"});
-    }else if(user){
-      var validPassword = user.comparePassword(req.body.password);
-      if(!validPassword){
-        res.send({message: "Invalid Password!"})
-      }else{
-        /////token
-        var token = createToken(user);
-        res.json({
-          success: true,
-          message: "Successfuly login!",
-          token: token
-        });
-      }
-    }
-  });
-}
-
-// AUTH // ----------
-exports.auth = function(req, res, next) {
-  console.log("Somebody just came to our app!");
-  var token = req.body.token || req.param('token') || req.headers['x-access-token'];
-  // check if token exist
-  if (token){
-    jsonwebtoken.verify(token, secretKey,function(err,decoded){
-      if(err){
-        res.status(403).send({success: false, message: "Failed to authenticate user"});
-      }else{
-        //
-        req.decoded = decoded;
-        next();
-      }
-    });
-  }else{
-    res.status(403).send({success: false, message: "No token provided"});
   }
 }
 

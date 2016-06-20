@@ -2,9 +2,7 @@ angular.module('appRoutes', ['ngRoute'])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'js/views/home.html',
-        controller: 'MainController', //HomeController
-        controllerAs: 'main'
+        templateUrl: 'js/views/home.html'
       })
       .when('/bandas', {
         templateUrl: 'js/views/bandas.html',
