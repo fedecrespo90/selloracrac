@@ -24,6 +24,7 @@
 * In another CMD / Bash (place on app/ folder) run _node server.js_
 * In your browser type _http://localhost:3000_
 <h3>Creating a user for the first time:</h3>
-* In your browser put this url: _http://localhost:3000/#/signup_
+* In your browser put this url: _http://localhost:3000/signup_
+* If the URL doesn't work, maybe, you have to comment the line 4 ( _$location.path('/');_ ) in _SignupController.js_ ( _app/public/js/controllers_ ).
 
 And that's it! :)
