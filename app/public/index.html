@@ -24,11 +24,11 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
-            <li><a href="/bandas">Bandas</a></li>
-            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="bandas">Bandas</a></li>
+            <li><a href="contacto">Contacto</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li ng-if="main.loggedIn"><a href="/signup">Signup</a></li>
+            <li ng-if="main.loggedIn"><a href="signup">Signup</a></li>
             <li ng-if="main.loggedIn"><a href="/">Hello {{main.user.username}}</a></li>
             <li ng-if="main.loggedIn"><a href="/" ng-click="main.doLogout()">Logout</a></li>
           </ul>
