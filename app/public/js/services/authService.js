@@ -55,10 +55,10 @@ angular.module('authService', [])
 		}
 		return config;
 	};
-	interceptorFactory.responseError = function(response){
-		if(response.status == 403)
-			$location.path('/login');
-		return $q.reject(response);
-	}
+	// interceptorFactory.responseError = function(response){
+	// 	if(response.status == 403)
+	// 		$location.path('/login');
+	// 	return $q.reject(response);
+	// }
 	return interceptorFactory;
 });

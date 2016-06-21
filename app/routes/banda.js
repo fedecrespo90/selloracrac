@@ -98,6 +98,7 @@ module.exports = function(app, express) {
 			jsonwebtoken.verify(token, secretKey,function(err,decoded){
 				if(err){
 					res.status(403).send({success: false, message: "Failed to authenticate user"});
+					console.log("ERROR 403, LA SESION VENCIO?");
 				}else{
 					//
 					req.decoded = decoded;
@@ -106,6 +107,7 @@ module.exports = function(app, express) {
 			});
 		}else{
 			res.status(403).send({success: false, message: "No token provided"});
+			console.log("ERROR 403, LA SESION VENCIO?");
 		}
 	});
 
