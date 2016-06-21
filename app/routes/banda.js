@@ -10,7 +10,7 @@ function createToken(user){
 		name: user.name,
 		username: user.username
 	},secretKey, {
-		expiresIn: 1440
+		expiresIn: 86400//1440
 	});
 
 	return token;
@@ -98,7 +98,7 @@ module.exports = function(app, express) {
 			jsonwebtoken.verify(token, secretKey,function(err,decoded){
 				if(err){
 					res.status(403).send({success: false, message: "Failed to authenticate user"});
-					console.log("ERROR 403, LA SESION VENCIO?");
+					console.log("La sesión venció. Problema de autenticación.");
 				}else{
 					//
 					req.decoded = decoded;
@@ -107,7 +107,7 @@ module.exports = function(app, express) {
 			});
 		}else{
 			res.status(403).send({success: false, message: "No token provided"});
-			console.log("ERROR 403, LA SESION VENCIO?");
+			console.log("La sesión venció. Problema con el token.");
 		}
 	});
 
