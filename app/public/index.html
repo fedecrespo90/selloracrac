@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body ng-controller = "MainController as main">
+  <body ng-controller="MainController as main">
     <nav class="navbar racrac-nav">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -18,23 +18,21 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">RACRAC</a>
+          <a class="navbar-brand" href="/">
+              <img src="../images/racrac-logo.png" alt="RACRAC">
+          </a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-          <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="bandas">Bandas</a></li>
-            <li><a href="contacto">Contacto</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li ng-if="main.loggedIn"><a href="signup">Signup</a></li>
-            <li ng-if="main.loggedIn"><a href="/">Hello {{main.user.username}}</a></li>
-            <li ng-if="main.loggedIn"><a href="/" ng-click="main.doLogout()">Logout</a></li>
-          </ul>
+          <ul class="nav navbar-nav pull-right">
+            <li><a ng-class="{active: $route.current.activetab == 'bandas'}" href="bandas">Bandas</a></li>
+            <li><a ng-class="{active: $route.current.activetab == 'contacto'}" href="contacto">Contacto</a></li>
+            <li ng-show="main.loggedIn" class="ng-hide"><a href="/">Hello {{main.user.username}}</a></li>
+            <li ng-show="main.loggedIn" class="ng-hide"><a href="/" ng-click="main.doLogout()">Logout</a></li>
+           </ul>
         </div>
       </div>
     </nav>
-    <div class="container-fluid">
+    <div class="racrac-container" ng-class="mainBackground">
       <div ng-view></div>
     </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>

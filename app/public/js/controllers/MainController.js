@@ -1,5 +1,5 @@
-angular.module('mainCtrl',[])
-.controller('MainController', function($rootScope, $location, Auth){
+function MainCtrl ($rootScope, $location, Auth, $scope, $route) {
+	$scope.$route = $route;
 	var vm = this;
 	vm.loggedIn = Auth.isLoggedIn();
 	$rootScope.$on('$routeChangeStart', function(){
@@ -29,4 +29,7 @@ angular.module('mainCtrl',[])
 		Auth.logout();
 		$location.path('/logout');
 	}
-});
+}
+
+angular.module('mainCtrl',[])
+.controller('MainController', MainCtrl);
