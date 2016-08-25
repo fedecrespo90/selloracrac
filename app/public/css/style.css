@@ -7,7 +7,7 @@ body, html {
 * {
   font-family: 'Roboto', sans-serif;	
   font-size: 15px;
-  transition: all .25s ease; 
+  transition: all .15s linear; 
 }
  
 /* ENDS GENERAL STYLES */
@@ -60,6 +60,8 @@ body, html {
 
 /* ENDS CONTAINER STYLES */
 
+/* STARTS HOME STYLES */ 
+
 .welcome-message {
   position: absolute;
   top: 50%;
@@ -81,6 +83,11 @@ body, html {
   color: #f5f6f7;
   outline: none;
 }
+
+/* ENDS HOME STYLES */
+
+/* STARTS BANDS SECTION STYLES */
+
 .bands-row {
   padding: 25px;
 }
@@ -121,6 +128,8 @@ body, html {
 .band .band-content span.band-title {
   line-height: 48px;
 }
+
+/* ENDS BANDS SECTION STYLES */ 
 
 /* STARTS CONTACT STYLES */
 

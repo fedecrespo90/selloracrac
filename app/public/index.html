@@ -26,8 +26,8 @@
           <ul class="nav navbar-nav pull-right">
             <li><a ng-class="{active: $route.current.activetab == 'bandas'}" href="bandas">Bandas</a></li>
             <li><a ng-class="{active: $route.current.activetab == 'contacto'}" href="contacto">Contacto</a></li>
-            <li ng-show="main.loggedIn" class="ng-hide"><a href="/">Hello {{main.user.username}}</a></li>
-            <li ng-show="main.loggedIn" class="ng-hide"><a href="/" ng-click="main.doLogout()">Logout</a></li>
+            <li ng-if="main.loggedIn"><a href="/">Hello {{main.user.username}}</a></li>
+            <li ng-if="main.loggedIn"><a href="/" ng-click="main.doLogout()">Logout</a></li>
            </ul>
         </div>
       </div>
