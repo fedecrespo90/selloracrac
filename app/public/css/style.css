@@ -2,14 +2,14 @@
 
 body, html {
   height: 100%;
-  overflow-x: hidden;   
+  overflow-x: hidden;
 }
 * {
-  font-family: 'Roboto', sans-serif;	
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
-  transition: all .15s linear; 
+  transition: all .15s linear;
 }
- 
+
 /* ENDS GENERAL STYLES */
 
 /* STARTS HEADER & NAV STYLES */
@@ -22,11 +22,11 @@ body, html {
 .nav a {
   color: #444;
   text-transform: uppercase;
-  outline: none;   
+  outline: none;
 }
-.nav>li>a:focus, 
-.nav>li>a:hover { 
-  background: none;  
+.nav>li>a:focus,
+.nav>li>a:hover {
+  background: none;
   color: #00bfae;
 }
 .nav>li>a.active {
@@ -38,7 +38,7 @@ body, html {
 .racrac-nav {
   border-radius:0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  padding: 5px 0;  
+  padding: 5px 0;
 }
 
 /* ENDS HEADER & NAV STYLES */
@@ -51,16 +51,16 @@ body, html {
 }
 
 .home-background {
-  background: url("../images/background.jpg") no-repeat center center fixed; 
+  background: url("../images/background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;  
+  background-size: cover;
 }
 
 /* ENDS CONTAINER STYLES */
 
-/* STARTS HOME STYLES */ 
+/* STARTS HOME STYLES */
 
 .welcome-message {
   position: absolute;
@@ -79,7 +79,7 @@ body, html {
 .welcome-message .btn:hover,
 .welcome-message .btn:focus {
   background: #231f20;
-  border: 1px solid #231f20;  
+  border: 1px solid #231f20;
   color: #f5f6f7;
   outline: none;
 }
@@ -129,7 +129,7 @@ body, html {
   line-height: 48px;
 }
 
-/* ENDS BANDS SECTION STYLES */ 
+/* ENDS BANDS SECTION STYLES */
 
 /* STARTS CONTACT STYLES */
 
@@ -169,3 +169,50 @@ body, html {
 }
 
 /* ENDS CONTACT STYLES */
+
+/* STARTS AGREGAR STYLES */
+
+.agregar-background {
+  background: #231f20;
+}
+.agregar-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.agregar-form {
+  max-width: 550px;
+  margin: 0 auto;
+}
+.agregar-form input {
+  height: 50px;
+}
+.agregar-form input[placeholder] {
+  font-size: 1em;
+}
+.agregar-form textarea {
+  height: 150px;
+}
+.agregar-form .btn {
+  background: #00bfae;
+  color: #f5f6f7;
+  height: 100%;
+  /*width: 20%;*/
+}
+.agregar-form .btn:hover,
+.agregar-form .btn:focus {
+  background: #009d8f;
+  outline: none;
+}
+
+/* ENDS AGREGAR STYLES */
+
+.link-input {
+  margin-top: 15px;
+}
+
+.cover-input {
+  display: none !important;
+}

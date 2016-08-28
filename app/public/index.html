@@ -24,6 +24,7 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
           <ul class="nav navbar-nav pull-right">
+            <li ng-if="main.loggedIn"><a href="agregar">+</a></li>
             <li><a ng-class="{active: $route.current.activetab == 'bandas'}" href="bandas">Bandas</a></li>
             <li><a ng-class="{active: $route.current.activetab == 'contacto'}" href="contacto">Contacto</a></li>
             <li ng-if="main.loggedIn"><a href="/">Hello {{main.user.username}}</a></li>
@@ -49,6 +50,11 @@
     <script src="js/controllers/HomeController.js"></script>
     <script src="js/controllers/BandController.js"></script>
     <script src="js/controllers/userController.js"></script>
+    <script src="js/controllers/addController.js"></script>
+    <!-- Directives -->
+    <script src="js/directives/addInputDirective.js"></script>
+    <script src="js/directives/uploadFileDirective.js"></script>
+
     <script src="js/controllers/ContactController.js"></script>
     <script src="js/controllers/SignupController.js"></script>
   </body>
