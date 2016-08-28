@@ -4,7 +4,7 @@ function uploadFile($compile){
     link: clickInput
   }
 };
-function clickInput(scope , element, attributes){
+function clickInput(scope, element, attributes){
   element.bind("click", function(e){
     document.getElementById(attributes["uploadFile"]).click();
   });
