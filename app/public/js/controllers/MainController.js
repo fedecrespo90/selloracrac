@@ -1,5 +1,7 @@
 function MainCtrl ($rootScope, $location, Auth, $scope, $route) {
 	$scope.$route = $route;
+	$scope.$parent.mainBackground = '';
+	$scope.error = false;		
 	var vm = this;
 	vm.loggedIn = Auth.isLoggedIn();
 	$rootScope.$on('$routeChangeStart', function(){
@@ -11,7 +13,6 @@ function MainCtrl ($rootScope, $location, Auth, $scope, $route) {
 	});
 	vm.doLogin = function(){
 		vm.processing = true;
-		vm.error = '';
 		Auth.login(vm.loginData.username, vm.loginData.password)
 			.success(function(data){
 				vm.processing = false;
@@ -22,7 +23,8 @@ function MainCtrl ($rootScope, $location, Auth, $scope, $route) {
 				if(data.success)
 					$location.path('/');
 				else
-					vm.error = data.message;
+					$scope.error = true;
+				  console.log('error');
 			});
 	}
 	vm.doLogout = function(){
@@ -31,5 +33,6 @@ function MainCtrl ($rootScope, $location, Auth, $scope, $route) {
 	}
 }
 
-angular.module('mainCtrl',[])
-.controller('MainController', MainCtrl);
+angular
+	.module('mainCtrl',[])
+	.controller('MainController', MainCtrl);

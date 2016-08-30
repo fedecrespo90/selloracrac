@@ -5,5 +5,6 @@ function bandas ($scope, bandas) {
   });
 }
 
-angular.module('Site')
+angular
+	.module('Site')
 	.controller('BandController', ['$scope', 'bandas', bandas]);
