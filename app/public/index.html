@@ -6,6 +6,7 @@
     <title>RACRAC</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">    
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body ng-controller="MainController as main">
@@ -27,7 +28,7 @@
             <li ng-if="main.loggedIn"><a href="agregar">+</a></li>
             <li><a ng-class="{active: $route.current.activetab == 'bandas'}" href="bandas">Bandas</a></li>
             <li><a ng-class="{active: $route.current.activetab == 'contacto'}" href="contacto">Contacto</a></li>
-            <li ng-if="main.loggedIn"><a href="/">Hello {{main.user.username}}</a></li>
+            <li ng-if="main.loggedIn"><a href="/">Hola {{main.user.name}}</a></li>
             <li ng-if="main.loggedIn"><a href="/" ng-click="main.doLogout()">Logout</a></li>
            </ul>
         </div>

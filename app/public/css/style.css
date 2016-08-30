@@ -7,7 +7,8 @@ body, html {
 * {
   font-family: 'Roboto', sans-serif;	
   font-size: 15px; 
-  transition: all .15s linear; 
+  transition: all .15s linear;
+  box-sizing: border-box;  
 }
 textarea {
   resize: none;
@@ -18,7 +19,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+i {
   padding: 0;
   margin: 0;
 }
@@ -150,6 +152,23 @@ p {
 .band .band-content span.band-title {
   line-height: 48px;
 }
+.band-icons {
+  padding: 12px 7px 7px 7px;
+  display: block;
+  text-align: right;
+}
+.band-icons i {
+  color: #444;
+  font-size: 1.2em;
+}
+.band-icons .edit:hover,
+.band-icons .edit:focus {
+  color: #00bfae;
+}
+.band-icons .delete:hover,
+.band-icons .delete:focus {
+  color: #E53935;
+}
 
 /* ENDS BANDS SECTION STYLES */ 
 
@@ -197,7 +216,8 @@ p {
   background: #00bfae;
   color: #f5f6f7;
   height: 100%;
-  width: 15%;
+  font-weight: 300;
+  width: 30%;
   float: right;
   border: none;
   border-radius: 2px;
