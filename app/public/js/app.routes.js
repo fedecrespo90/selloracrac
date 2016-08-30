@@ -7,12 +7,17 @@ function router ($routeProvider, $locationProvider) {
     .when('/bandas', {
       templateUrl: 'js/views/bandas.html',
       controller: 'BandController',
-      activetab: 'bandas'      
+      activetab: 'bandas'
     })
     .when('/contacto', {
       controller: 'ContactController',
       templateUrl: 'js/views/contacto.html',
-      activetab: 'contacto'  
+      activetab: 'contacto'
+    })
+    .when('/agregar', {
+      controller: 'AddController',
+      templateUrl: 'js/views/agregar.html',
+      activetab: 'agregar'
     })
     .when('/login', {
       templateUrl: 'js/views/login.html'

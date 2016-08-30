@@ -1,12 +1,16 @@
 <div class="row bands-row">
 	<div class="col-md-4" ng-repeat="banda in bandas">
     <div class="band">
+			<div>
+				<button ng-if="main.loggedIn" class="btn btn-primary" type="button" name="button">Edit</button>
+				<button ng-if="main.loggedIn" class="btn btn-danger" type="button" name="button">X</button>
+			</div>
       <div class="band-image">
         <img class="img-responsive" src="http://assets.rollingstone.com/assets/2014/gallery/30-most-embarrassing-rock-star-arrests-20140227/gg-allin-0351711/129586/_original/1035x813-ggallin-1800-1393446131.jpg">
-      </div>        
+      </div>
       <div class="band-content">
       	<h1 class="band-title">{{ banda.name }}</h1>
-      </div>        
-    </div>	    
-	</div>  
+      </div>
+    </div>
+	</div>
 </div>

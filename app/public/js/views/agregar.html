@@ -1,0 +1,30 @@
+<div class="agregar-container">
+  <form class="agregar-form" ng-submit="enviar()">
+    <fieldset class="form-group">
+      <input class="form-control" type="text" name="name" placeholder="Nombre" ng-model="name">
+    </fieldset>
+    <fieldset class="form-group">
+      <input class="form-control" type="text" name="name" placeholder="Ciudad" ng-model="name">
+    </fieldset>
+    <fieldset class="form-group">
+      <button upload-file="load-thumb" class="form-control btn btn-primary" type="button" name="button">Subir miniatura</button>
+      <input id="load-thumb" class="cover-input" type="file">
+    </fieldset>
+    <fieldset class="form-group">
+      <button upload-file="load-file" class="form-control btn btn-primary" type="button" name="button">Subir portada</button>
+      <input id="load-file" class="cover-input" type="file">
+    </fieldset>
+    <fieldset class="form-group">
+      <input class="form-control" type="text" name="name" placeholder="Link video" ng-model="name">
+    </fieldset>
+    <fieldset class="form-group">
+      <input add-input class="form-control btn btn-primary" type="submit" name="submit" value="Agregar link">
+    </fieldset>
+    <fieldset class="form-group">
+      <textarea class="form-control" name="content" placeholder="Reseña" ng-model="content"></textarea>
+    </fieldset>
+    <fieldset class="form-group">
+      <input class="form-control btn btn-primary" type="submit" name="submit" value="Guardar">
+    </fieldset>
+  </form>
+</div>
