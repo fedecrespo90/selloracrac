@@ -25,11 +25,11 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
           <ul class="nav navbar-nav pull-right">
-            <li ng-if="main.loggedIn"><a href="agregar">+</a></li>
+            <li ng-if="main.loggedIn" ng-cloak><a href="agregar">+</a></li>
             <li><a ng-class="{active: $route.current.activetab == 'bandas'}" href="bandas">Bandas</a></li>
             <li><a ng-class="{active: $route.current.activetab == 'contacto'}" href="contacto">Contacto</a></li>
-            <li ng-if="main.loggedIn"><a href="/">Hola {{main.user.name}}</a></li>
-            <li ng-if="main.loggedIn"><a href="/" ng-click="main.doLogout()">Logout</a></li>
+            <li ng-if="main.loggedIn" ng-cloak><a href="/">Hola {{main.user.name}}</a></li>
+            <li ng-if="main.loggedIn" ng-cloak><a href="/" ng-click="main.doLogout()">Logout</a></li>
            </ul>
         </div>
       </div>
