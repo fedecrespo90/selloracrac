@@ -289,3 +289,38 @@ i {
 }
 
 /* ENDS ERROR STYLES */
+
+/* STARTS BAND PROFILE STYLES */
+
+.band-profile-container {
+  padding: 25px;  
+}
+.band-profile-header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 515px;
+  position: relative;
+}
+.fog {
+  background: #444;
+  height: 100%;
+  width: 100%;
+  opacity: .5;
+}
+.band-profile-header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;  
+  color: #f5f6f7;
+  font-size: 5.5em;
+}
+.band-profile-container p {
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-justify: inter-word;  
+}
+/* ENDS BAND PROFILE STYLES */
