@@ -32,7 +32,7 @@ function MainCtrl ($rootScope, $location, Auth, $scope, $route) {
 	}
 	vm.doLogout = function(){
 		Auth.logout();
-		$location.path('/');
+		$location.path('/logout');
 	}
 }
 
