@@ -1,0 +1,36 @@
+{
+	"name":  "Los Chicos Bien",
+	"bio": "Los chicos bien surge en el 2015 para que una parte de Doctor Simio pueda tocar seguido. En el 2016 Bauti se va a vivir a La Plata asi que a Pablo y Martin se le suman Gera y Huguito",
+	"thumbnail": "foto-chiquita",
+	"cover": "foto-portada",
+	"records": [
+		{
+			"name": "Los chicos bien",
+			"cover": "lalala.jpg",
+			"tracks": [
+				{
+					"name": "Iaiaia",
+					"num": 1,
+					"file": "iaiaia.mp3"
+				},
+				{
+					"name": "Bien",
+					"num": 2,
+					"file": "bien.mp3"
+				}
+			]
+		}
+	],
+	"video": "link-video",
+	"links": [
+		{
+			"name": "Facebook",
+			"url": "https://www.facebook.com/loschicosbienloschicosbien/"
+		},
+		{
+			"name": "Youtube",
+			"url": "http..."
+		}
+	],
+	"ciudad": "Bahía Blanca"
+}

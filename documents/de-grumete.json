@@ -1,0 +1,40 @@
+{
+	"name":  "De Grumete",
+	"bio": "son millones de mutantes es una excusa para volcar musica y sonidos que dan vueltas en la cabeza de martín curie",
+	"thumbnail": "foto-chiquita",
+	"cover": "foto-portada",
+	"records": [
+		{
+			"name": "Los chicos bien",
+			"cover": "lalala.jpg",
+			"tracks": [
+				{
+					"name": "Iaiaia",
+					"num": 1,
+					"file": "iaiaia.mp3"
+				},
+				{
+					"name": "Bien",
+					"num": 2,
+					"file": "bien.mp3"
+				}
+			]
+		}
+	],
+	"video": "link-video",
+	"links": [
+		{
+			"name": "Facebook",
+			"url": "http...."
+		},
+		{
+			"name": "Vimeo",
+			"url": "http..."
+		},
+		{
+			"name": "Tienda",
+			"url": "http..."
+		}
+	],
+	"ciudad": "Bahía Blanca"
+}

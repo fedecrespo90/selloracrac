@@ -1,0 +1,40 @@
+{
+	"name":  "Las Jovenes Idealistas",
+	"bio": "Estos chicos (Lea Beier, Juanma Beier, Zenon Deviagge) son dos guitarras y batería. Cuando se puede. Si no, son un dúo. O también solo navideño puede hacer un acústico. Es que no evitan la contingencia, ni la distancia, ni la ausencias, y las hacen parte: hay música fuera de la vida? Y levantan la bandera de la navidad en canciones simples: la navidad como rito, como melancolía, como negocio, cómo infancia de películas malas; como síntesis de capitalismo y sentimientos.",
+	"thumbnail": "foto-chiquita",
+	"cover": "foto-portada",
+	"records": [
+		{
+			"name": "L chicos bien",
+			"cover": "lalala.jpg",
+			"tracks": [
+				{
+					"name": "Iaiaia",
+					"num": 1,
+					"file": "iaiaia.mp3"
+				},
+				{
+					"name": "Bien",
+					"num": 2,
+					"file": "bien.mp3"
+				}
+			]
+		}
+	],
+	"video": "link-video",
+	"links": [
+		{
+			"name": "Facebook",
+			"url": "http...."
+		},
+		{
+			"name": "Vimeo",
+			"url": "http..."
+		},
+		{
+			"name": "Tienda",
+			"url": "http..."
+		}
+	],
+	"ciudad": "Bahía Blanca"
+}

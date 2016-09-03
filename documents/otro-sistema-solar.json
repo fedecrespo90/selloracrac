@@ -1,6 +1,6 @@
 {
-	"name":  "Los chicos bien",
-	"bio": "Una vez estabamos re pillos...",
+	"name":  "Otro Sistema Solar",
+	"bio": "",
 	"thumbnail": "foto-chiquita",
 	"cover": "foto-portada",
 	"records": [
@@ -25,14 +25,10 @@
 	"links": [
 		{
 			"name": "Facebook",
-			"url": "http...."
+			"url": "https://www.facebook.com/loschicosbienloschicosbien/"
 		},
 		{
-			"name": "Vimeo",
-			"url": "http..."
-		},
-		{
-			"name": "Tienda",
+			"name": "Youtube",
 			"url": "http..."
 		}
 	],
