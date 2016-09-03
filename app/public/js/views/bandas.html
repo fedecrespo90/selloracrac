@@ -1,16 +1,18 @@
 <div class="row bands-row">
-	<div class="col-md-4" ng-repeat="banda in bandas">
-    <div class="band">
-			<div class="band-icons">
-				<a href="" ng-if="main.loggedIn"><i class="material-icons edit">mode_edit</i></a>
-				<a href="" ng-if="main.loggedIn"><i class="material-icons delete">clear</i></a>
-			</div>
-      <div class="band-image">
-        <img class="img-responsive" src="http://assets.rollingstone.com/assets/2014/gallery/30-most-embarrassing-rock-star-arrests-20140227/gg-allin-0351711/129586/_original/1035x813-ggallin-1800-1393446131.jpg">
+	<div class="col-md-4" ng-repeat="banda in bandas | orderBy:'name'">
+    <a href="bandas/{{banda.name}}">
+      <div class="band">
+  			<div ng-if="main.loggedIn" class="band-icons">
+  				<i class="material-icons edit">mode_edit</i>
+  				<i class="material-icons delete">clear</i>
+  			</div>
+        <div class="band-image">
+          <img class="img-responsive" src="http://assets.rollingstone.com/assets/2014/gallery/30-most-embarrassing-rock-star-arrests-20140227/gg-allin-0351711/129586/_original/1035x813-ggallin-1800-1393446131.jpg">
+        </div>
+        <div class="band-content">
+        	<h1 class="band-title">{{ banda.name }}</h1>
+        </div>
       </div>
-      <div class="band-content">
-      	<h1 class="band-title">{{ banda.name }}</h1>
-      </div>
-    </div>
-	</div>
+    </a>
+  </div>
 </div>

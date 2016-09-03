@@ -26,6 +26,10 @@ function router ($routeProvider, $locationProvider) {
       templateUrl: 'js/views/signup.html',
       controller: 'SignupController'
     })
+    .when("/bandas/:name", {
+        templateUrl: 'js/views/bandprofile.html',
+        controller: 'BandProfileController'
+    })    
     .otherwise({
       redirectTo: '/'
     });
