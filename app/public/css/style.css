@@ -8,7 +8,14 @@ body, html {
   font-family: 'Roboto', sans-serif;	
   font-size: 15px; 
   transition: all .15s linear;
-  box-sizing: border-box;  
+  box-sizing: border-box;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */ 
+}
+a:hover {
+  text-decoration: none;
 }
 textarea {
   resize: none;
@@ -24,7 +31,14 @@ i {
   padding: 0;
   margin: 0;
 }
-
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
 /* ENDS GENERAL STYLES */
 
 /* STARTS HEADER & NAV STYLES */
@@ -117,10 +131,13 @@ i {
   border-radius: 4px;
   margin-bottom: 25px;
   background: #fff;
-}
-.band {
+  cursor: pointer;
   box-sizing: border-box;
-  background-clip: padding-box;
+  background-clip: padding-box;  
+}
+.band:hover {
+  transform: scale(1.005);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.28);  
 }
 .band h1.band-title {
   color: #231f20;
@@ -160,6 +177,7 @@ i {
 .band-icons i {
   color: #444;
   font-size: 1.2em;
+  cursor: pointer;
 }
 .band-icons .edit:hover,
 .band-icons .edit:focus {
