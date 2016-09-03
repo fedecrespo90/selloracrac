@@ -1,12 +1,12 @@
 function MainCtrl ($rootScope, $location, Auth, $scope, $route) {
 	$scope.$route = $route;
 	$scope.$parent.mainBackground = '';
-	$scope.error = false;		
+	$scope.error = false;
 	var vm = this;
 	vm.loggedIn = Auth.isLoggedIn();
   if(vm.loggedIn) {
     $location.path('/');
-  }	
+  }
 	$rootScope.$on('$routeChangeStart', function(){
 		vm.loggedIn = Auth.isLoggedIn();
 		Auth.getUser()
