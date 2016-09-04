@@ -296,11 +296,11 @@ i {
   padding: 25px;  
 }
 .band-profile-header {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 515px;
-  position: relative;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  height: 515px !important;
+  position: relative !important;
 }
 .fog {
   background: #444;
@@ -321,6 +321,5 @@ i {
   text-align: center;
   font-size: 1.2em;
   text-transform: uppercase;
-  text-justify: inter-word;  
 }
 /* ENDS BAND PROFILE STYLES */
