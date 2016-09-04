@@ -4,6 +4,8 @@ var morgan = require('morgan');
 var config = require('./config');
 var mongoose = require('mongoose');
 //var banda  = require('./routes/banda');
+var email = require('./routes/email');
+
 var app = express();
 var http = require('http').Server(app);
 
@@ -30,6 +32,10 @@ app.use('/api', api);
 // ROUTES //
 app.get('*', function(req, res){
 	res.sendFile(__dirname + '/public/index.html');
+});
+app.post('/send-mail', function(req, res){
+	console.log(req.body.name);
+	email.sendNow(req, res);
 });
 //app.get('/api', banda.index);
 ////app.get('/api/banda/:id', banda.show_edit);

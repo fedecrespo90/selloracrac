@@ -1,10 +1,10 @@
 <div class="form-container">
-  <form class="form" ng-submit="enviar()">
+  <form class="form" action="send-mail" method="post">
     <fieldset class="form-group">
       <input class="form-control" type="text" name="name" placeholder="Nombre" ng-model="name">
     </fieldset>
     <fieldset class="form-group">
-      <input class="form-control" type="email" name="email" placeholder="Email" ng-model="email">
+      <input class="form-control" type="email" name="from" placeholder="Email" ng-model="email">
     </fieldset>
     <fieldset class="form-group">
       <textarea class="form-control" name="content" placeholder="Mensaje" ng-model="content"></textarea>
@@ -13,4 +13,4 @@
       <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
     </fieldset>
   </form>
-</div>  
+</div>

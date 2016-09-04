@@ -1,40 +1,16 @@
 {
 	"name":  "Son Millones de Mutantes",
 	"bio": "Son millones de mutantes es una excusa para volcar musica y sonidos que dan vueltas en la cabeza de Martín Curie",
-	"thumbnail": "foto-chiquita",
-	"cover": "foto-portada",
-	"records": [
-		{
-			"name": "Los chicos bien",
-			"cover": "lalala.jpg",
-			"tracks": [
-				{
-					"name": "Iaiaia",
-					"num": 1,
-					"file": "iaiaia.mp3"
-				},
-				{
-					"name": "Bien",
-					"num": 2,
-					"file": "bien.mp3"
-				}
-			]
-		}
-	],
-	"video": "link-video",
+	"thumbnail": "millones-thumb.jpg",
+	"cover": "millones-cover.jpg",
 	"links": [
 		{
-			"name": "Facebook",
-			"url": "http...."
-		},
-		{
-			"name": "Vimeo",
-			"url": "http..."
-		},
-		{
-			"name": "Tienda",
-			"url": "http..."
+			"name": "Bandcamp",
+			"url": "https://racrac.bandcamp.com/"
 		}
 	],
+	"bandcamp-disc": {
+		"tag": "<iframe style='border: 0; width: 100%; height: 100%;' src='https://bandcamp.com/EmbeddedPlayer/album=3777659577/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/' seamless><a href='http://racrac.bandcamp.com/album/era-un-dinosaurio'>era un dinosaurio by son Millones de Mutantes</a></iframe>"
+	},
 	"ciudad": "Bahía Blanca"
 }

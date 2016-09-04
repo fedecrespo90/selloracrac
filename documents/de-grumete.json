@@ -1,40 +1,16 @@
 {
 	"name":  "De Grumete",
-	"bio": "son millones de mutantes es una excusa para volcar musica y sonidos que dan vueltas en la cabeza de martín curie",
-	"thumbnail": "foto-chiquita",
-	"cover": "foto-portada",
-	"records": [
-		{
-			"name": "Los chicos bien",
-			"cover": "lalala.jpg",
-			"tracks": [
-				{
-					"name": "Iaiaia",
-					"num": 1,
-					"file": "iaiaia.mp3"
-				},
-				{
-					"name": "Bien",
-					"num": 2,
-					"file": "bien.mp3"
-				}
-			]
-		}
-	],
-	"video": "link-video",
+	"bio": "De Grumete es un conjunto de sonidos locos que hace Fede Crespo",
+	"thumbnail": "dg-thumb.jpg",
+	"cover": "dg-cover.jpg",
 	"links": [
 		{
-			"name": "Facebook",
-			"url": "http...."
-		},
-		{
-			"name": "Vimeo",
-			"url": "http..."
-		},
-		{
-			"name": "Tienda",
-			"url": "http..."
+			"name": "Bandcamp",
+			"url": "https://racrac.bandcamp.com/"
 		}
 	],
-	"ciudad": "Bahía Blanca"
+	"bandcamp-disc": {
+		"tag": "<iframe style='border: 0; width: 100%; height: 100%;' src='https://bandcamp.com/EmbeddedPlayer/album=3461206056/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/' seamless><a href='http://racrac.bandcamp.com/album/pedro-romaniuk'>Pedro Romaniuk by De Grumete</a></iframe>"
+	},
+	"ciudad": "La Plata"
 }
