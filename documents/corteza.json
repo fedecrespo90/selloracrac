@@ -3,8 +3,8 @@
 	"bio": "Corteza es una banda formada en la ciudad de La Plata en el mes de mayo del año 2011, a partir de una iniciativa común que era hacer un poco de ruido. Es así que desde esa fecha mantiene la formación inicial con Federico De Battista en bajo, Federico Juarez en Guitarra y voz, Federico Crespo en batería y Bruno Pierolivo en guitarra. En el año 2013 logró juntar un repertorio de temas necesarios, y entra a grabar lo que sería su primer EP, Corteza I. Luego de la publicación de este EP (en el año 2014), continuaron armando temas para un nuevo material (Del Centeno al Caos) que fue grabado en el estudio La Puerta del Sol de la ciudad en La Plata. Esta vez el disco estuvo mezclado y masterizado por Mauro López, bajista de KNEI y batero de Las Sombras. La presentación fue por internet un lunes de agosto del 2015. En este 2016 la banda se encuentra preparando lo que será su nuevo disco.",
 	"thumbnail": "corteza-thumb.jpg",
 	"cover": "corteza-cover.jpg",
-	"bandcamp-disc": {
-		"tag": "<iframe style='border: 0; width: 100%; height: 100%;' src='https://bandcamp.com/EmbeddedPlayer/album=3705891201/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/' seamless><a href='http://racrac.bandcamp.com/album/del-centeno-al-caos'>Del centeno al caos by Corteza</a></iframe>"
+	"bandcamp": {
+		"src": "https://bandcamp.com/EmbeddedPlayer/album=3705891201/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
 	},
 	"links": [
 		{
