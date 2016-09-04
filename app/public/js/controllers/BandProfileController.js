@@ -7,6 +7,7 @@ function bandas ($scope, bandas) {
     	return el.name === selectedBand;
     });
     $scope.banda = $scope.banda[0];
+    $scope.bandcampSrc = $scope.banda.bandcamp.src;	   
   });
 }
 

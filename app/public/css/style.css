@@ -81,12 +81,12 @@ i {
 .racrac-container {
   position: relative;
   margin-top: 62px;
-  height: calc(100% - 62px);
-  background: #f7f7f7;;
+  background: #f7f7f7;
+  height: calc(100% - 62px);    
 }
 
 .home-background {
-  background: url("../images/background.jpg") no-repeat center center fixed; 
+  background: url("../images/background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
