@@ -1,11 +1,16 @@
 {
 	"name":  "Entre cero y el infinito",
+	"name":  "entre-cero-y-el-infinito",
 	"bio": "Entre cero y el infinito se formó en 2013. Siendo trío al princpio (Martin Hache, Bruno Hache y Santos), lograron conformar el cuarteto, con Luna en bajo, el mismo año que grabaron el disco (2015). Este año (2016) se renovó la mitad de la formación con el Mazzu en batería y Eze Ortiz en bajo",
 	"thumbnail": "ec-thumb.jpg",
 	"cover": "ec-cover.jpg",
-	"bandcamp": {
-		"src": "https://bandcamp.com/EmbeddedPlayer/album=1142023773/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
-	},
+	"bandcamp": [
+		{
+			"name": "Entre cero y el infinito",
+			"image":"entre1.jpg",
+			"src": "https://bandcamp.com/EmbeddedPlayer/album=3830440268/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+		}
+	],
 	"links": [
 		{
 			"name": "Facebook",

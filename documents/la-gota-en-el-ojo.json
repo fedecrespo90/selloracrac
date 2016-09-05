@@ -1,12 +1,26 @@
 {
 	"name":  "La Gota en el Ojo",
-	"bio": "La Gota en el Ojo comienza entre el 2002 y el 2003 como trio.
-En el 2013 se conforma la formación definitiva con Beto y Lauta en guitarras, el Indio en la voz, Mauro en el bajo y Pabliten en bateria.",
+	"slug":  "la-gota",
+	"bio": "La Gota en el Ojo comienza entre el 2002 y el 2003 como trio. En el 2013 se conforma la formación definitiva con Beto y Lauta en guitarras, el Indio en la voz, Mauro en el bajo y Pabliten en bateria.",
 	"thumbnail": "gota-thumb.jpg",
 	"cover": "gota-cover.jpg",
-	"bandcamp": {
-		"src": "https://bandcamp.com/EmbeddedPlayer/album=573117579/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
-	},
+	"bandcamp": [
+		{
+		"name": "Disparador",
+		"image":"gota3.jpg",
+		"src": "https://bandcamp.com/EmbeddedPlayer/album=573117579/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+		},
+		{
+			"name":"La gota en el ojo",
+			"image":"gota2.jpg",
+			"src":"https://bandcamp.com/EmbeddedPlayer/album=228940722/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+		},
+		{
+		"name": "Demostracion",
+		"image":"gota1.jpg",
+		"src": "https://bandcamp.com/EmbeddedPlayer/album=281207922/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+		}
+	],
 	"links": [
 		{
 			"name": "Facebook",

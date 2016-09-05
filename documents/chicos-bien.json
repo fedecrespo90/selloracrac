@@ -1,12 +1,22 @@
 {
 	"name":  "Los Chicos Bien",
+	"slug":  "los-chicos-bien",
 	"bio": "Los chicos bien surge en el 2015 para que una parte de Doctor Simio pueda tocar seguido. En el 2016 Bauti se va a vivir a La Plata asi que a Pablo y Martin se le suman Gera y Huguito",
 	"thumbnail": "chicos-thumb.jpg",
 	"cover": "chicos-cover-jpg",
 	"video": "link-video",
-	"bandcamp": {
-		"src": "https://bandcamp.com/EmbeddedPlayer/album=964814959/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
-	},
+	"bandcamp": [
+		{
+			"name": "Señores papis",
+			"image":"chicos2.jpg",
+			"src": "https://bandcamp.com/EmbeddedPlayer/album=964814959/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+		},
+		{
+			"name":"Los chicos bien",
+			"image":"chicos1.jpg",
+			"src":"https://bandcamp.com/EmbeddedPlayer/album=639945238/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+		}
+	],
 	"links": [
 		{
 			"name": "Facebook",
