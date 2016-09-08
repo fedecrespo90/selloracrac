@@ -69,6 +69,9 @@
   width: 14px;
   height: 14px;
 
+  /* Added */
+  margin-left: 155px;
+
   border:  solid 2px transparent;
   border-top-color:  #29d;
   border-left-color: #29d;
