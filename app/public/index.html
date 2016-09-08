@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.css' type='text/css' media='all' />
   </head>
   <body ng-controller="MainController as main">
     <nav class="navbar racrac-nav">
@@ -37,8 +38,11 @@
     <div class="racrac-container" ng-class="mainBackground">
       <div ng-view></div>
     </div>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.js'></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-animate.js"></script>
   	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular-route.min.js"></script>
+
     <!--Module-->
     <script src="js/app.js"></script>
     <script src="js/app.routes.js"></script>
@@ -50,14 +54,14 @@
     <script src="js/controllers/MainController.js"></script>
     <script src="js/controllers/HomeController.js"></script>
     <script src="js/controllers/BandController.js"></script>
-    <script src="js/controllers/BandProfileController.js"></script>    
+    <script src="js/controllers/BandProfileController.js"></script>
     <script src="js/controllers/UserController.js"></script>
     <script src="js/controllers/addController.js"></script>
     <script src="js/controllers/ContactController.js"></script>
-    <script src="js/controllers/SignupController.js"></script>    
+    <script src="js/controllers/SignupController.js"></script>
     <!-- Directives -->
     <script src="js/directives/addInputDirective.js"></script>
     <script src="js/directives/uploadFileDirective.js"></script>
-    <script src="js/directives/iframeDirective.js"></script>        
+    <script src="js/directives/iframeDirective.js"></script>
   </body>
 </html>

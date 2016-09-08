@@ -9,6 +9,7 @@
   "author": "Fede Crespo, Martin Palmieri & Flor Crespo",
   "license": "ISC",
   "dependencies": {
+    "angular-loading-bar": "^0.9.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "1.15.1",
     "express": "4.13.4",
