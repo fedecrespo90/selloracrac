@@ -116,9 +116,9 @@ module.exports = function(app, express) {
 	});
 
 	// // ULTIMO //
-	// api.get('/me', function(req,res){
-	// 	res.json(req.decoded);
-	// });
+	api.get('/me', function(req,res){
+		res.json(req.decoded);
+	});
 	return api;
 }
 
