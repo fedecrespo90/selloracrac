@@ -33,10 +33,10 @@ app.use('/api', api);
 app.get('*', function(req, res){
 	res.sendFile(__dirname + '/public/index.html');
 });
-app.post('/send-mail', function(req, res){
-	console.log(req.body.name);
-	email.sendNow(req, res);
-});
+// app.post('/send-mail', function(req, res){
+// 	console.log(req.body.name);
+// 	email.sendNow(req, res);
+// });
 //app.get('/api', banda.index);
 ////app.get('/api/banda/:id', banda.show_edit);
 ////app.post('/api/up/:id', banda.update);

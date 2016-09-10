@@ -26,7 +26,7 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
           <ul class="nav navbar-nav pull-right">
-            <li ng-if="main.loggedIn" ng-cloak><a href="agregar">+</a></li>
+            <li ng-if="main.loggedIn" ng-cloak><a href="agregar/musica">+</a></li>
             <li><a ng-class="{active: $route.current.activetab == 'bandas'}" href="bandas">Bandas</a></li>
             <li><a ng-class="{active: $route.current.activetab == 'contacto'}" href="https://www.facebook.com/Selloracrac" target="_blank">Contacto</a></li>
             <li ng-if="main.loggedIn" ng-cloak><a href="/">Hola {{main.user.name}}</a></li>
@@ -45,8 +45,10 @@
     <!--Module-->
     <script src="js/app.js"></script>
     <script src="js/app.routes.js"></script>
+    <script src="js/modules/angular-multiple-file-upload.js"></script>
     <!-- Services -->
     <script src="js/services/bandas.js"></script>
+    <script src="js/services/musica.js"></script>
     <script src="js/services/authService.js"></script>
     <script src="js/services/userService.js"></script>
     <!-- Controllers -->
@@ -55,12 +57,12 @@
     <script src="js/controllers/BandController.js"></script>
     <script src="js/controllers/BandProfileController.js"></script>
     <script src="js/controllers/UserController.js"></script>
-    <script src="js/controllers/addController.js"></script>
+    <script src="js/controllers/AddBandController.js"></script>
+    <script src="js/controllers/AddMusicController.js"></script>
     <script src="js/controllers/ContactController.js"></script>
     <script src="js/controllers/SignupController.js"></script>
     <!-- Directives -->
     <script src="js/directives/addInputDirective.js"></script>
     <script src="js/directives/uploadFileDirective.js"></script>
-    <script src="js/directives/iframeDirective.js"></script>
   </body>
 </html>

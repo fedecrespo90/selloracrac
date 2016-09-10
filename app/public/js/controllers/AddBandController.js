@@ -1,4 +1,4 @@
-function AddController ($scope) {
+function AddBandController ($scope) {
     $scope.$parent.mainBackground = 'contact-background';
     $scope.enviar = function() {
         var nombre = $scope.name;
@@ -15,4 +15,4 @@ function AddController ($scope) {
 
 angular
     .module('Site')
-    .controller('AddController', ['$scope', AddController]);
+    .controller('AddBandController', ['$scope', AddBandController]);
