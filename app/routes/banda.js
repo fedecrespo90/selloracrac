@@ -1,5 +1,6 @@
 var User = require('../models/users');
 var Banda = require('../models/bandas');
+var fileRoute = require('./file');
 var config = require('../config');
 var secretKey = config.secretKey;
 var jsonwebtoken = require('jsonwebtoken');
@@ -90,6 +91,9 @@ module.exports = function(app, express) {
 		});
 	});
 
+	// LOGIN  //
+	api.post('/upload', fileRoute.upload);
+
 	api.use(function(req, res, next) {
 		console.log("Somebody just came to our app!");
 		var token = req.body.token || req.param('token') || req.headers['x-access-token'];
@@ -111,10 +115,10 @@ module.exports = function(app, express) {
 		}
 	});
 
-	// ULTIMO //
-	api.get('/me', function(req,res){
-		res.json(req.decoded);
-	});
+	// // ULTIMO //
+	// api.get('/me', function(req,res){
+	// 	res.json(req.decoded);
+	// });
 	return api;
 }
 

@@ -9,14 +9,15 @@
   "author": "Fede Crespo, Martin Palmieri & Flor Crespo",
   "license": "ISC",
   "dependencies": {
-    "angular-loading-bar": "^0.9.0",
+    "angular-loading-bar": "0.9.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "1.15.1",
     "express": "4.13.4",
+    "formidable": "1.0.17",
     "jsonwebtoken": "7.0.1",
     "mongoose": "4.4.19",
     "morgan": "1.7.0",
-    "nodemailer": "^2.5.0",
-    "querystring": "^0.2.0"
+    "nodemailer": "2.5.0",
+    "querystring": "0.2.0"
   }
 }
