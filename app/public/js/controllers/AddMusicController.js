@@ -3,4 +3,5 @@ AddMusicController = function(musica) {
 }
 angular
     .module('Site')
-    .controller('AddMusicController', ['musica', AddMusicController]);
+    .controller('AddMusicController', AddMusicController);
+  //'musica'
