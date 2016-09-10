@@ -3,12 +3,7 @@ var path = require('path');
 var formidable = require('formidable');
 var fs = require('fs');
 
-exports.index = function(req, res){
-  res.sendFile(path.join(__dirname, '../views/index.html'));
-};
-
 exports.upload = function(req, res){
-  console.log("hola");
   // create an incoming form object
   var form = new formidable.IncomingForm();
 
@@ -22,7 +17,7 @@ exports.upload = function(req, res){
   // rename it to it's orignal name
   form.on('file', function(field, file) {
     fs.rename(file.path, path.join(form.uploadDir, file.name));
-    saveName(req, res, file.name);
+    //saveName(req, res, file.name);
   });
 
   // log any errors that occur

@@ -22,7 +22,7 @@ function router ($routeProvider, $locationProvider) {
     .when('/agregar/musica', {
       controller: 'AddMusicController',
       templateUrl: 'js/views/agregarMusica.html',
-      activetab: 'agregarMusica'
+      activetab: 'musica'
     })
     .when('/login', {
       templateUrl: 'js/views/login.html'
