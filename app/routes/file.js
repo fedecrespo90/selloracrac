@@ -8,6 +8,7 @@ exports.index = function(req, res){
 };
 
 exports.upload = function(req, res){
+  console.log("hola");
   // create an incoming form object
   var form = new formidable.IncomingForm();
 
