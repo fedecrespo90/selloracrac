@@ -1,6 +1,8 @@
 function PlayerController ($scope, ngAudio, musica) {
   var url = [];
   var j = 0;
+  $scope.toggle = true;
+  $scope.toggleText = 'Play';
   musica.success(function(data){
     $scope.temas = data;
     for (var i = 0; i < $scope.temas.length; i++) {
@@ -28,8 +30,6 @@ function PlayerController ($scope, ngAudio, musica) {
       }
     })
   });
-  $scope.toggle = true;
-  $scope.toggleText = 'Play';
 }
 
 angular
