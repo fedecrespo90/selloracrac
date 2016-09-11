@@ -1,5 +1,5 @@
 function bandas ($scope, bandas) {
-	var selectedBand = $scope.$route.current.pathParams.name;
+	var selectedBand = $scope.$route.current.pathParams.slug;
 	$scope.$parent.mainBackground = '';
   bandas.success(function(data){
     $scope.bandas = data;
