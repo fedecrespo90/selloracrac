@@ -1,11 +1,10 @@
 {
 	"name":  "Doctor Simio",
+	"slug": "doctor-simio",
 	"bio": "Doctor Simio es una banda que nace en Bahía Blanca en el 2013 con la idea de hacer ruido. De esta manera se cruzan Federico Crespo (voz y guitarra), Martin Palmieri (guitarra), Bautista Palmieri (bajo), Ale Moreno (guitarra y teclados) y Pablo Gonzalez (batería). Hasta el día de hoy tienen 5 materiales grabados (El experimento, Invasion de gatos, Los mas grandes momentos de Mauro Viale, Pol Rogers, Charlie Alf y su viejo delay, y Doctor Simio presenta a los Dandy Arriaga).",
 	"thumbnail": "doctor-thumb.jpg",
 	"cover": "doctor-cover.jpg",
-	"bandcamp": {
-	},
-	"bandcamp": [
+	"records": [
 		{
 			"name": "Doctor Simio presenta a los Dandy Arriaga",
 			"image":"doctor5.jpg",
