@@ -91,8 +91,12 @@ module.exports = function(app, express) {
 		});
 	});
 
-	// LOGIN  //
+	// UPLOAD  //
 	api.post('/upload', fileRoute.upload);
+	api.get('/musica/:name', fileRoute.item);
+	api.get('/musica/', fileRoute.list);
+
+
 
 	api.use(function(req, res, next) {
 		console.log("Somebody just came to our app!");

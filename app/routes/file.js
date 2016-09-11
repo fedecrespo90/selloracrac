@@ -3,6 +3,12 @@ var path = require('path');
 var formidable = require('formidable');
 var fs = require('fs');
 
+getDirectories = function(srcpath) {
+  return fs.readdirSync(srcpath).filter(function(file) {
+    return fs.statSync(path.join(srcpath, file)).isDirectory();
+  });
+}
+
 exports.upload = function(req, res){
   // create an incoming form object
   var form = new formidable.IncomingForm();
@@ -53,13 +59,48 @@ saveName = function(req, res, name) {
   }
 };
 
+
+
 exports.item = function(req, res) {
-  File.findById(req.params.id, gotFile);
-  function gotFile (err, thisF) {
-    if (err) {
-      console.log(err)
-      return next(err)
+  var filePath = path.join(__dirname, '../uploads/');
+  res.sendFile(filePath+req.params.name);
+
+  // fs.readdir(filePath, function(err, filenames) {
+  //   if (err) {
+  //     throw err;
+  //     return;
+  //   }
+  //   //res.sendFile(filePath+filenames[randomInt(0,filenames.length)]);
+  // });
+  //Store
+  // File.findById(req.params.id, gotFile);
+  // function gotFile (err, thisF) {
+  //   if (err) {
+  //     console.log(err)
+  //     return next(err)
+  //   }
+  //   res.sendFile(path.join(__dirname, '../uploads/'+thisF.name));
+  // }
+};
+
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length; i; i--) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
     }
-    res.sendFile(path.join(__dirname, '../uploads/'+thisF.name));
-  }
+    return a;
+}
+
+exports.list = function(req, res) {
+  var filePath = path.join(__dirname, '../uploads/');
+  fs.readdir(filePath, function(err, filenames) {
+    if (err) {
+      throw err;
+      return;
+    }
+    res.json(shuffle(filenames));
+  });
 };
