@@ -19,7 +19,6 @@ function PlayerController ($scope, ngAudio, musica) {
       }
     }
     $scope.$watch('audio.progress', function(){
-      console.log($scope.audio.progress);
       if($scope.audio.progress === 1) {
         j++;
         if(j === $scope.temas.length) {
