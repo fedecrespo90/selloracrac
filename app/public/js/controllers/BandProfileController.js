@@ -4,7 +4,7 @@ function bandas ($scope, bandas) {
   bandas.success(function(data){
     $scope.bandas = data;
     $scope.banda = $scope.bandas.filter(function(el) {
-    	return el.name === selectedBand;
+    	return el.slug === selectedBand;
     });
     $scope.banda = $scope.banda[0];
   });
