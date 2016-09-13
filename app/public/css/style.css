@@ -50,6 +50,12 @@ i {
   width: 100%;
   z-index: 20;  
 }
+.navbar-toggle .icon-bar {
+  background: #444;
+}
+.navbar-toggle:hover .icon-bar {
+  background: #00bfae;
+}
 .racrac-nav {
   border-radius:0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -293,7 +299,9 @@ i {
 /* STARTS BAND PROFILE STYLES */
 
 .band-profile-container {
-  padding: 25px;  
+  padding: 25px;
+  position: relative;
+  background: #f7f7f7;  
 }
 .band-profile-header {
   background-size: cover !important;
@@ -321,5 +329,16 @@ i {
   text-align: center;
   font-size: 1.2em;
   text-transform: uppercase;
+  margin-bottom: 30px
 }
+.band-profile-container .bandcamp-embed {
+  border: 0;
+  width: 700px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  display: block;
+}
+
 /* ENDS BAND PROFILE STYLES */
