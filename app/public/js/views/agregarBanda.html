@@ -1,4 +1,4 @@
-<div class="form-container">
+<div class="form-container" ng-if="main.loggedIn">
   <form class="form" ng-submit="enviar()">
     <fieldset class="form-group">
       <input class="form-control" type="text" name="name" placeholder="Nombre" ng-model="name">

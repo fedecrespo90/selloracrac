@@ -23,11 +23,12 @@ function MainCtrl ($rootScope, $location, Auth, $scope, $route) {
 					.then(function(data){
 						vm.user = data.data;
 					});
-				if(data.success)
+				if(data.success) {
 					$location.path('/');
-				else
+				} else {
 					$scope.error = true;
 				  console.log('error');
+				}
 			});
 	}
 	vm.doLogout = function(){

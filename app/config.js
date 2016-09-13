@@ -1,5 +1,7 @@
+require('dotenv').config();
+
 module.exports = {
-	"database" : "mongodb://localhost/sello",
-	"port" : process.env.PORT || 80,
+	"database" : process.env.DB_HOST || "mongodb://localhost/sello",
+	"port" : process.env.PORT || 3000,
 	"secretKey" : "YourSecretKey"
 }

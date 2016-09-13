@@ -1,5 +1,6 @@
 {
 	"name":  "De Grumete",
+	"slug": "de-grumete",
 	"bio": "De Grumete es un conjunto de sonidos locos que hace Fede Crespo",
 	"thumbnail": "dg-thumb.jpg",
 	"cover": "dg-cover.jpg",
@@ -9,8 +10,17 @@
 			"url": "https://racrac.bandcamp.com/"
 		}
 	],
-	"bandcamp": {
-		"src": "https://bandcamp.com/EmbeddedPlayer/album=3461206056/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
-	},
+	"records": [
+		{
+			"name": "Las cucarachas lograron romper el candado de Lucas",
+			"image":"dg2.jpg",
+			"src": "https://bandcamp.com/EmbeddedPlayer/album=601243917/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+		},
+		{
+			"name":"Pedro Romaniuk",
+			"image":"dg1.jpg",
+			"src":"https://bandcamp.com/EmbeddedPlayer/album=3461206056/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+		}
+	],
 	"ciudad": "La Plata"
 }

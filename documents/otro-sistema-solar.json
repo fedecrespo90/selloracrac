@@ -1,11 +1,26 @@
 {
 	"name":  "Otro Sistema Solar",
-	"bio": "",
+	"bio": "Proyecto de Rock Neo Psycodelico de La Plata. Con un sonido clásico y actual. Nace en el 2013 con algunas canciones. Luego de 'Color Primario' primer EP de la banda, nace en el 2016 OXSXS primer album de larga duración ya con una formación estable a cargo de: Germán Herrera, Luciano Lorenzo, Luca Fumigador, Marcos Fernandez y Bautista Palmera.",
+	"slug": "oss",
 	"thumbnail": "oss-thumb.jpg",
 	"cover": "oss-cover.jpg",
-	"bandcamp": {
-		"src": "https://bandcamp.com/EmbeddedPlayer/album=2077298749/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
-	},
+	"bandcamp": [
+		{
+			"name": "OXSXS",
+			"image":"oss3.jpg",
+			"src": "https://bandcamp.com/EmbeddedPlayer/album=2077298749/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+		},
+		{
+			"name": "Lenguaje universal",
+			"image":"oss2.jpg",
+			"src": "https://bandcamp.com/EmbeddedPlayer/album=666482368/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+		},
+		{
+			"name":"Color primario",
+			"image":"oss1.jpg",
+			"src":"https://bandcamp.com/EmbeddedPlayer/album=2318267950/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+		}
+	],
 	"links": [
 		{
 			"name": "Facebook",

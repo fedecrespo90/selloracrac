@@ -14,10 +14,15 @@ function router ($routeProvider, $locationProvider) {
       templateUrl: 'js/views/contacto.html',
       activetab: 'contacto'
     })
-    .when('/agregar', {
-      controller: 'AddController',
-      templateUrl: 'js/views/agregar.html',
-      activetab: 'agregar'
+    .when('/agregar/banda', {
+      controller: 'AddBandController',
+      templateUrl: 'js/views/agregarBanda.html',
+      activetab: 'agregarBanda'
+    })
+    .when('/agregar/musica', {
+      controller: 'AddMusicController',
+      templateUrl: 'js/views/agregarMusica.html',
+      activetab: 'musica'
     })
     .when('/login', {
       templateUrl: 'js/views/login.html'
@@ -26,10 +31,10 @@ function router ($routeProvider, $locationProvider) {
       templateUrl: 'js/views/signup.html',
       controller: 'SignupController'
     })
-    .when("/bandas/:name", {
+    .when("/bandas/:slug", {
         templateUrl: 'js/views/bandprofile.html',
         controller: 'BandProfileController'
-    })    
+    })
     .otherwise({
       redirectTo: '/'
     });

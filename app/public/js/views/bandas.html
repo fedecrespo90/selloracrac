@@ -1,6 +1,6 @@
 <div class="row bands-row">
 	<div class="col-md-4" ng-repeat="banda in bandas | orderBy:'name'">
-    <a href="bandas/{{banda.name}}">
+    <a href="bandas/{{banda.slug}}">
       <div class="band">
   			<div ng-if="main.loggedIn" class="band-icons">
   				<i class="material-icons edit">mode_edit</i>
