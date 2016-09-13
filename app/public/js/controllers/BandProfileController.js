@@ -7,9 +7,10 @@ function bandas ($scope, bandas) {
     	return el.slug === selectedBand;
     });
     $scope.banda = $scope.banda[0];
+    $scope.bandcampSrc = $sce.trustAsResourceUrl($scope.banda.bandcamp.src);   
   });
 }
 
 angular
 	.module('Site')
-	.controller('BandProfileController', ['$scope', 'bandas', bandas]);
+	.controller('BandProfileController', ['$scope', 'bandas', '$sce', bandas]);
