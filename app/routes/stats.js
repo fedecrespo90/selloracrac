@@ -4,18 +4,17 @@ var iplocation = require('iplocation');
 
 exports.list = function(req, res) {
   Stats.find(gotStats);
-  function gotStats (err, stats) {
+  function gotStats (err, data) {
     if (err) {
       console.log(err);
       return next();
     }
-    return res.json(stats);
+    return res.json(data);
   }
 };
 
 exports.saveVisitor = function(req, res) {
-  console.log(req.connection.remoteAddress);
-  iplocation('181.231.47.251', function (error, data) {
+  iplocation(req.connection.remoteAddress, function (error, data) {
     if(error) {
       throw error;
     } else {
