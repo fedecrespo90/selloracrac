@@ -30,7 +30,7 @@ app.use('/api', api);
 
 // ROUTES //
 app.get('*', function(req, res){
-	stats.saveVisitor(req, res);
+	//stats.saveVisitor(req, res);
 	res.sendFile(__dirname + '/public/index.html');
 });
 
