@@ -61,7 +61,7 @@ saveName = function(req, res, name) {
 
 
 
-exports.item = function(req, res) {
+exports.item = function(req, res, next) {
   var filePath = path.join(__dirname, '../uploads/');
   res.sendFile(filePath+req.params.name);
 
@@ -95,12 +95,18 @@ function shuffle(a) {
 }
 
 exports.list = function(req, res) {
+  var list = [];
   var filePath = path.join(__dirname, '../uploads/');
   fs.readdir(filePath, function(err, filenames) {
+    for (var i = 0; i < filenames.length; i++) {
+      if(path.extname(filenames[i]) == '.mp3') {
+        list[i] = filenames[i];
+      }
+    }
     if (err) {
       throw err;
       return;
     }
-    res.json(shuffle(filenames));
+    res.json(shuffle(list));
   });
 };
