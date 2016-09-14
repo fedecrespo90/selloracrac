@@ -3,8 +3,7 @@ var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var config = require('./config');
 var mongoose = require('mongoose');
-//var banda  = require('./routes/banda');
-var email = require('./routes/email');
+var stats  = require('./routes/stats');
 
 var app = express();
 var http = require('http').Server(app);
@@ -31,25 +30,9 @@ app.use('/api', api);
 
 // ROUTES //
 app.get('*', function(req, res){
+	stats.saveVisitor(req, res);
 	res.sendFile(__dirname + '/public/index.html');
 });
-// app.post('/send-mail', function(req, res){
-// 	console.log(req.body.name);
-// 	email.sendNow(req, res);
-// });
-//app.get('/api', banda.index);
-////app.get('/api/banda/:id', banda.show_edit);
-////app.post('/api/up/:id', banda.update);
-////app.get('/api/rm/:id', banda.remove);
-////app.post('/api/new', banda.create);
-//app.post('/api/signup', banda.signup);
-//app.get('/api/users', banda.users);
-//app.post('/api/login', banda.login);
-//app.use(banda.auth);
-
-// ERRORS //
-///app.use(banda.err404);
-///app.use(banda.err500);
 
 http.listen(config.port, function (err) {
 	if (err) {
