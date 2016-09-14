@@ -28,6 +28,7 @@
           <ul class="nav navbar-nav pull-right">
             <li ng-if="main.loggedIn" ng-controller="PlayerController" ng-cloak><button class="btn btn-primary ng-binding" ng-click="evaluate()">{{toggleText}}</button></li>
             <li ng-if="main.loggedIn" ng-cloak><a href="agregar/musica">+</a></li>
+            <li ng-if="main.loggedIn" ng-cloak><a href="stats">Stats</a></li>
             <li><a ng-class="{active: $route.current.activetab == 'bandas'}" href="bandas">Bandas</a></li>
             <li><a ng-class="{active: $route.current.activetab == 'contacto'}" href="https://www.facebook.com/Selloracrac" target="_blank">Contacto</a></li>
             <li ng-if="main.loggedIn" ng-cloak><a href="/">Hola {{main.user.name}}</a></li>
@@ -39,8 +40,8 @@
     <div class="racrac-container" ng-class="mainBackground">
       <div ng-view></div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.1/angular.js"></script>
   	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.1/angular-route.js"></script>
     <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.js'></script>
@@ -52,6 +53,7 @@
     <!-- Services -->
     <script src="js/services/bandas.js"></script>
     <script src="js/services/musica.js"></script>
+    <script src="js/services/stats.js"></script>
     <script src="js/services/authService.js"></script>
     <script src="js/services/userService.js"></script>
     <!-- Controllers -->
@@ -59,6 +61,7 @@
     <script src="js/controllers/HomeController.js"></script>
     <script src="js/controllers/BandController.js"></script>
     <script src="js/controllers/BandProfileController.js"></script>
+    <script src="js/controllers/StatsController.js"></script>
     <script src="js/controllers/UserController.js"></script>
     <script src="js/controllers/AddBandController.js"></script>
     <script src="js/controllers/AddMusicController.js"></script>

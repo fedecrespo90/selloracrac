@@ -1,0 +1,88 @@
+<div ng-if="main.loggedIn">
+  <!--HEADER-->
+  <div class="row">
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <strong>IP</strong>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <strong>Country code</strong>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+      <strong>Country name</strong>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <strong>Region code</strong>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <strong>Region name</strong>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <strong>City</strong>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <strong>Zip code</strong>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+      <strong>Time zone</strong>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <strong>Latitude</strong>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <strong>Longitude</strong>
+    </div>
+  </div>
+  <!--STATS-->
+  <div class="row" ng-repeat="state in stats.stats">
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <p>
+        {{state.ip}}
+      </p>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <p>
+        {{state.country_code}}
+      </p>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+      <p>
+        {{state.country_name}}
+      </p>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <p>
+        {{state.region_code}}
+      </p>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <p>
+        {{state.region_name}}
+      </p>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <p>
+        {{state.city}}
+      </p>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <p>
+        {{state.zip_code}}
+      </p>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+      <p>
+        {{state.time_zone}}
+      </p>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <p>
+        {{state.latitude}}
+      </p>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <p>
+        {{state.longitude}}
+      </p>
+    </div>
+  </div>
+</div>

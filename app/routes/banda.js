@@ -1,6 +1,7 @@
 var User = require('../models/users');
 var Banda = require('../models/bandas');
 var fileRoute = require('./file');
+var stats = require('./stats');
 var config = require('../config');
 var secretKey = config.secretKey;
 var jsonwebtoken = require('jsonwebtoken');
@@ -11,7 +12,7 @@ function createToken(user){
 		name: user.name,
 		username: user.username
 	},secretKey, {
-		expiresIn: 86400//1440
+		expiresIn: 1440
 	});
 
 	return token;
@@ -94,7 +95,10 @@ module.exports = function(app, express) {
 	// UPLOAD  //
 	api.post('/upload', fileRoute.upload);
 	api.get('/musica/:name', fileRoute.item);
-	api.get('/musica/', fileRoute.list);
+	api.get('/musica', fileRoute.list);
+	// STATS //
+	api.get('/stats', stats.list);
+
 
 
 

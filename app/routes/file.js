@@ -72,7 +72,6 @@ exports.item = function(req, res, next) {
   //   }
   //   //res.sendFile(filePath+filenames[randomInt(0,filenames.length)]);
   // });
-  //Store
   // File.findById(req.params.id, gotFile);
   // function gotFile (err, thisF) {
   //   if (err) {

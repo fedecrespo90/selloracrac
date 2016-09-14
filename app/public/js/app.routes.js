@@ -9,6 +9,12 @@ function router ($routeProvider, $locationProvider) {
       controller: 'BandController',
       activetab: 'bandas'
     })
+    .when('/stats', {
+      controller: 'StatsController',
+      controllerAs: 'stats',
+      templateUrl: 'js/views/stats.html',
+      activetab: 'stats'
+    })
     .when('/contacto', {
       controller: 'ContactController',
       templateUrl: 'js/views/contacto.html',
