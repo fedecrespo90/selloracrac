@@ -43,6 +43,7 @@ exports.saveVisitor = function(req, res, count) {
 };
 
 exports.drop = function(req, res) {
-  Stats.drop();
-  res.send("droped");
+  Stats.remove({}, function(err) {
+     res.send('collection removed')
+  });
 };
