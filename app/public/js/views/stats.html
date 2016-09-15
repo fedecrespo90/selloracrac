@@ -2,6 +2,9 @@
   <!--HEADER-->
   <div class="row">
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <strong>Visitor num</strong>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
       <strong>IP</strong>
     </div>
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
@@ -9,9 +12,6 @@
     </div>
     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
       <strong>Country name</strong>
-    </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
-      <strong>Region code</strong>
     </div>
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
       <strong>Region name</strong>
@@ -33,7 +33,13 @@
     </div>
   </div>
   <!--STATS-->
-  <div class="row" ng-repeat="state in stats.stats">
+
+  <div class="row" ng-repeat="state in stats.stats | orderBy:'visit_number':true">
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+      <h3>
+        {{state.visit_number}}
+      </h3>
+    </div>
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
       <p>
         {{state.ip}}
@@ -49,11 +55,11 @@
         {{state.country_name}}
       </p>
     </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+    <!--div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
       <p>
         {{state.region_code}}
       </p>
-    </div>
+    </div-->
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
       <p>
         {{state.region_name}}
