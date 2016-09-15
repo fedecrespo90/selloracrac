@@ -13,7 +13,7 @@ exports.list = function(req, res) {
   }
 };
 
-exports.saveVisitor = function(req, res) {
+exports.saveVisitor = function(req, res, count) {
   iplocation(req.connection.remoteAddress, function (error, data) {
     if(error) {
       throw error;
@@ -28,7 +28,8 @@ exports.saveVisitor = function(req, res) {
         zip_code : data.zip_code,
         time_zone : data.time_zone,
         latitude : data.latitude,
-        longitude : data.longitude
+        longitude : data.longitude,
+        visit_number: count
       });
       thisVisitor.save(onSaved);
       function onSaved (err, doc) {
@@ -39,4 +40,9 @@ exports.saveVisitor = function(req, res) {
       }
     }
   });
+};
+
+exports.drop = function(req, res) {
+  Stats.drop();
+  res.send("droped");
 };

@@ -98,9 +98,7 @@ module.exports = function(app, express) {
 	api.get('/musica', fileRoute.list);
 	// STATS //
 	api.get('/stats', stats.list);
-
-
-
+	api.get('/stats/drop', stats.drop);
 
 	api.use(function(req, res, next) {
 		console.log("Somebody just came to our app!");

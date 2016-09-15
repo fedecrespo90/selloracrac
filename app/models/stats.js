@@ -10,7 +10,8 @@ var stats_schema = new Schema({
   zip_code : String,
   time_zone : String,
   latitude : String,
-  longitude : String
+  longitude : String,
+  visit_number: Number
 });
 
 module.exports = mongoose.model('Stats', stats_schema);
