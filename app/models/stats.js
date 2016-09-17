@@ -11,7 +11,8 @@ var stats_schema = new Schema({
   time_zone : String,
   latitude : String,
   longitude : String,
-  visit_number: Number
+  visit_number: Number,
+  created: {type: Date, defauly: Date.now}
 });
 
 module.exports = mongoose.model('Stats', stats_schema);
