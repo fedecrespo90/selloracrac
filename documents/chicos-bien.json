@@ -9,12 +9,12 @@
 		{
 			"name": "Señores papis",
 			"image":"chicos2.jpg",
-			"src": "https://bandcamp.com/EmbeddedPlayer/album=964814959/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+			"href": "https://loschicosbien.bandcamp.com/album/se-ores-papis"
 		},
 		{
 			"name":"Los chicos bien",
 			"image":"chicos1.jpg",
-			"src":"https://bandcamp.com/EmbeddedPlayer/album=639945238/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+			"href":"https://racrac.bandcamp.com/album/los-chicos-bien"
 		}
 	],
 	"links": [

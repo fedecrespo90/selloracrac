@@ -8,27 +8,27 @@
 		{
 			"name": "Doctor Simio presenta a los Dandy Arriaga",
 			"image":"doctor5.jpg",
-			"src": "https://bandcamp.com/EmbeddedPlayer/album=672659231/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+			"href": "https://racrac.bandcamp.com/album/presenta-a-los-dandy-arriaga"
 		},
 		{
 			"name":"Pol Rogers, Charlie Alf y su viejo delay",
 			"image":"doctor4.jpg",
-			"src":"https://bandcamp.com/EmbeddedPlayer/album=228940722/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+			"href":"https://racrac.bandcamp.com/album/pol-rogers-charlie-alf-y-su-viejo-delay"
 		},
 		{
 			"name": "Los mas grandes momentos de Mauro Viale",
 			"image":"doctor3.jpg",
-			"src": "https://bandcamp.com/EmbeddedPlayer/album=281207922/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+			"href": "https://racrac.bandcamp.com/album/los-mas-grandes-momentos-de-mauro-viale-ep"
 		},
 		{
 			"name": "Invasion de gatos",
 			"image":"doctor2.jpg",
-			"src": "https://bandcamp.com/EmbeddedPlayer/album=281207922/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+			"href": "https://racrac.bandcamp.com/album/invasion-de-gatos"
 		},
 		{
 			"name": "El experimento",
 			"image":"doctor1.jpg",
-			"src": "https://bandcamp.com/EmbeddedPlayer/album=281207922/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+			"href": "https://doctorsimio.bandcamp.com/album/el-experimento"
 		}
 	],
 	"links": [

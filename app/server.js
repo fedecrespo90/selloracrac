@@ -38,8 +38,7 @@ app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/favicon', function(req, res){
-	console.log(counter)
-	//stats.saveVisitor(req, res, count);
+	stats.saveVisitor(req, res, count);
 	res.send(200);
 });
 var api = require('./routes/banda')(app,express);
