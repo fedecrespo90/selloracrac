@@ -10,10 +10,10 @@ function router ($routeProvider, $locationProvider) {
       activetab: 'bandas'
     })
     .when('/stats', {
-      // controller: 'StatsController',
-      // controllerAs: 'stats',
-      // templateUrl: 'js/views/stats.html',
-      // activetab: 'stats'
+      controller: 'StatsController',
+      controllerAs: 'stats',
+      templateUrl: 'js/views/stats.html',
+      activetab: 'stats'
     })
     .when('/contacto', {
       controller: 'ContactController',
