@@ -8,23 +8,23 @@
 		{
 			"name": "OXSXS",
 			"image":"oss3.jpg",
-			"src": "https://bandcamp.com/EmbeddedPlayer/album=2077298749/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+			"href": "https://otrosistemasolar.bandcamp.com/album/oxsxs"
 		},
 		{
 			"name": "Lenguaje universal",
 			"image":"oss2.jpg",
-			"src": "https://bandcamp.com/EmbeddedPlayer/album=666482368/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+			"href": "https://racrac.bandcamp.com/album/lenguaje-universal"
 		},
 		{
 			"name":"Color primario",
 			"image":"oss1.jpg",
-			"src":"https://bandcamp.com/EmbeddedPlayer/album=2318267950/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+			"href":"https://otrosistemasolar.bandcamp.com/album/color-primario"
 		}
 	],
 	"links": [
 		{
 			"name": "Facebook",
-			"url": "https://www.facebook.com/loschicosbienloschicosbien/"
+			"url": "https://www.facebook.com/otrosistemasolar/"
 		},
 		{
 			"name": "Bandcamp",

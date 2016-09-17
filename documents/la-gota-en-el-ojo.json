@@ -8,17 +8,17 @@
 		{
 		"name": "Disparador",
 		"image":"gota3.jpg",
-		"src": "https://bandcamp.com/EmbeddedPlayer/album=573117579/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+		"href": "https://racrac.bandcamp.com/album/disparador"
 		},
 		{
 			"name":"La gota en el ojo",
 			"image":"gota2.jpg",
-			"src":"https://bandcamp.com/EmbeddedPlayer/album=228940722/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+			"href":"https://lagotaenelojo.bandcamp.com/album/la-gota-en-el-ojo-2010"
 		},
 		{
 		"name": "Demostracion",
 		"image":"gota1.jpg",
-		"src": "https://bandcamp.com/EmbeddedPlayer/album=281207922/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+		"href": "https://lagotaenelojo.bandcamp.com/album/demostracion-2006"
 		}
 	],
 	"links": [
