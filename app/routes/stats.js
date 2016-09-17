@@ -3,7 +3,7 @@ var Stats = require('../models/stats');
 var iplocation = require('iplocation');
 
 exports.list = function(req, res) {
-  Stats.find(gotStats);
+  Stats.find({}, null, {sort: {_id: -1 }}, gotStats);
   function gotStats (err, data) {
     if (err) {
       console.log(err);

@@ -51,6 +51,7 @@
     <script src="js/modules/angular-multiple-file-upload.js"></script>
     <script src="js/modules/angular.audio.js"></script>
     <!-- Services -->
+    <script src="js/services/socket.js"></script>
     <script src="js/services/bandas.js"></script>
     <script src="js/services/musica.js"></script>
     <script src="js/services/stats.js"></script>
@@ -71,5 +72,11 @@
     <!-- Directives -->
     <script src="js/directives/addInputDirective.js"></script>
     <script src="js/directives/uploadFileDirective.js"></script>
+
+    <!--Socket.io-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+    </script>
   </body>
 </html>

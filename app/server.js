@@ -7,8 +7,8 @@ var stats  = require('./routes/stats');
 
 var app = express();
 var http = require('http').Server(app);
-
-var count = 0;
+var io = require('socket.io')(http);
+var counter = 0;
 //Connect to mongo
 mongoose.connect(config.database, function(err){
 	if(err){
@@ -16,6 +16,17 @@ mongoose.connect(config.database, function(err){
 	}else{
 		console.log('Connected to the database');
 	}
+});
+
+io.on('connection', function(socket){
+	console.log('--------------- user connected --------------------');
+	counter++;
+	io.emit('counter', counter);
+  socket.on('disconnect', function(){
+		console.log('--------------- user disconnected --------------------');
+		counter--;
+		io.emit('counter', counter);
+  });
 });
 
 // parse application/x-www-form-urlencoded
@@ -26,21 +37,18 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
 
-var api = require('./routes/banda')(app,express);
-
-app.get('/favicon.ico', function(req, res) {
-		count++;
-		stats.saveVisitor(req, res, count);
-    res.send(200);
+app.get('/favicon', function(req, res){
+	console.log(counter)
+	//stats.saveVisitor(req, res, count);
+	res.send(200);
 });
+var api = require('./routes/banda')(app,express);
 app.use('/api', api);
 
 // ROUTES //
 app.get('*', function(req, res){
-
 	res.sendFile(__dirname + '/public/index.html');
 });
-
 
 http.listen(config.port, function (err) {
 	if (err) {
