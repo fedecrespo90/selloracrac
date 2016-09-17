@@ -1,5 +1,5 @@
 Socket = function ($rootScope) {
-  var socket = io.connect(); //io.connect
+  var socket = io.connect();
   return {
     on: function (eventName, callback) {
       socket.on(eventName, function () {

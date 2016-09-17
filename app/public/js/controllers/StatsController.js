@@ -1,5 +1,4 @@
-function Stats (stats) {
-  var socket = io.connect();
+function Stats (stats, socket) {
   var self = this;
   self.stats = {};
   stats.success(function(data){
@@ -7,8 +6,8 @@ function Stats (stats) {
   });
   socket.on('counter', function(data){
     self.counter = data;
-  })
+  });
 }
 angular
 	.module('Site')
-	.controller('StatsController', ['stats', Stats]);
+	.controller('StatsController', ['stats', 'socket', Stats]);
