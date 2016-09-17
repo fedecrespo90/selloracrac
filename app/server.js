@@ -38,7 +38,6 @@ app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/favicon.ico', function(req, res){
-	counter++;
 	stats.saveVisitor(req, res, counter);
 	res.send(200);
 });
