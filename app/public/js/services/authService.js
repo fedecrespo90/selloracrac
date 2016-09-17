@@ -25,7 +25,10 @@ angular.module('authService', [])
 	}
 	authFactory.getUser = function(){
 		if(AuthToken.getToken())
-			return $http.get('/api/me');
+			return $http.get('/api/me')
+				.error(function(){
+					authFactory.logout();
+				});
 		else
 			return $q.reject({ message: "User has no token"});
 	}

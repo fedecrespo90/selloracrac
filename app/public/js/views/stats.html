@@ -2,7 +2,7 @@
   <!--HEADER-->
   <div class="row">
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
-      <strong>Visitor num</strong>
+      <h3>{{stats.counter}}</h3>
     </div>
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
       <strong>IP</strong>
@@ -34,11 +34,11 @@
   </div>
   <!--STATS-->
 
-  <div class="row" ng-repeat="state in stats.stats | orderBy:'visit_number':true">
+  <div class="row" ng-repeat="state in stats.stats">
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
-      <h3>
+      <!--h3>
         {{state.visit_number}}
-      </h3>
+      </h3-->
     </div>
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
       <p>
