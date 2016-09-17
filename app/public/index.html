@@ -33,6 +33,7 @@
             <li><a ng-class="{active: $route.current.activetab == 'contacto'}" href="https://www.facebook.com/Selloracrac" target="_blank">Contacto</a></li>
             <li ng-if="main.loggedIn" ng-cloak><a href="/">Hola {{main.user.name}}</a></li>
             <li ng-if="main.loggedIn" ng-cloak><a href="/" ng-click="main.doLogout()">Logout</a></li>
+            <li ng-if="main.loggedIn" ng-controller="StatsController as stats" ng-cloak><h3>{{stats.counter}}</h3></li>
            </ul>
         </div>
       </div>
@@ -42,9 +43,7 @@
     </div>
     <!--Socket.io-->
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io();
-    </script>
+
     <!--Bootstraip-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
