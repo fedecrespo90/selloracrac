@@ -1,4 +1,5 @@
 function MainCtrl ($rootScope, $location, Auth, $scope, $route) {
+	var socket = io.connect();
 	$scope.$route = $route;
 	$scope.$parent.mainBackground = '';
 	$scope.error = false;

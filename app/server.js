@@ -8,7 +8,7 @@ var stats  = require('./routes/stats');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var counter = 0;
+var counter = -1;
 //Connect to mongo
 mongoose.connect(config.database, function(err){
 	if(err){
@@ -18,7 +18,7 @@ mongoose.connect(config.database, function(err){
 	}
 });
 
-io.on('connection', function(socket){
+io.sockets.on('connection', function(socket){
 	console.log('--------------- user connected --------------------');
 	counter++;
 	io.emit('counter', counter);
