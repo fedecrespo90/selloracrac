@@ -4,10 +4,7 @@ function Stats (stats, socket) {
   stats.success(function(data){
     self.stats = data;
   });
-  socket.on('counter', function(data){
-    self.counter = data;
-  });
 }
 angular
 	.module('Site')
-	.controller('StatsController', ['stats', 'socket', Stats]);
+	.controller('StatsController', ['stats', Stats]);

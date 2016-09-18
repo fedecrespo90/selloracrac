@@ -1,9 +1,9 @@
 function MainCtrl ($rootScope, $location, Auth, $scope, $route) {
-	var socket = io.connect();
+	var vm = this;
 	$scope.$route = $route;
 	$scope.$parent.mainBackground = '';
 	$scope.error = false;
-	var vm = this;
+
 	vm.loggedIn = Auth.isLoggedIn();
   if(vm.loggedIn) {
     $location.path('/');
