@@ -8,7 +8,7 @@ var stats  = require('./routes/stats');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var counter = -1;
+var counter = 0;
 //Connect to mongo
 mongoose.connect(config.database, function(err){
 	if(err){
