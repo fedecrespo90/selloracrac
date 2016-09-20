@@ -2,17 +2,17 @@
 
 body, html {
   height: 100%;
-  overflow-x: hidden;   
+  overflow-x: hidden;
 }
 * {
-  font-family: 'Roboto', sans-serif;	
-  font-size: 15px; 
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
   transition: all .15s linear;
   box-sizing: border-box;
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
-  user-select: none;          /* Likely future */ 
+  user-select: none;          /* Likely future */
 }
 a:hover {
   text-decoration: none;
@@ -48,7 +48,7 @@ i {
   background: #fff;
   position: fixed;
   width: 100%;
-  z-index: 20;  
+  z-index: 20;
 }
 .navbar-toggle .icon-bar {
   background: #444;
@@ -59,7 +59,7 @@ i {
 .racrac-nav {
   border-radius:0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  padding: 5px 0;  
+  padding: 5px 0;
 }
 .navbar .navbar-header .navbar-brand {
   height: 100%;
@@ -69,18 +69,18 @@ i {
 .navbar i {
   top: 13px;
   right: 5px;
-  position: relative; 
+  position: relative;
   color: #444;
   cursor: pointer;
 }
 .nav a {
   color: #444;
   text-transform: uppercase;
-  outline: none;   
+  outline: none;
 }
-.nav>li>a:focus, 
-.nav>li>a:hover { 
-  background: none;  
+.nav>li>a:focus,
+.nav>li>a:hover {
+  background: none;
   color: #00bfae;
 }
 .nav>li>a.active {
@@ -97,7 +97,7 @@ i {
   background: #f7f7f7;
   min-height: 100%;
   height: auto;
-    
+
 }
 
 .home-background {
@@ -111,7 +111,7 @@ i {
 
 /* ENDS CONTAINER STYLES */
 
-/* STARTS HOME STYLES */ 
+/* STARTS HOME STYLES */
 
 .welcome-message {
   position: absolute;
@@ -130,7 +130,7 @@ i {
 .welcome-message .btn:hover,
 .welcome-message .btn:focus {
   background: #231f20;
-  border: 1px solid #231f20;  
+  border: 1px solid #231f20;
   color: #f5f6f7;
   outline: none;
 }
@@ -149,11 +149,11 @@ i {
   background: #fff;
   cursor: pointer;
   box-sizing: border-box;
-  background-clip: padding-box;  
+  background-clip: padding-box;
 }
 .band:hover {
   transform: scale(1.005);
-  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.28);  
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.28);
 }
 .band h1.band-title {
   color: #231f20;
@@ -204,7 +204,7 @@ i {
   color: #E53935;
 }
 
-/* ENDS BANDS SECTION STYLES */ 
+/* ENDS BANDS SECTION STYLES */
 
 /* STARTS FORMS STYLES */
 
@@ -218,13 +218,13 @@ i {
 .form {
   max-width: 550px;
   background: #fff;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);  
-  border-radius: 3px;  
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border-radius: 3px;
   padding: 30px;
   margin: 0 auto;
 }
 .form-control {
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
 .form input {
   height: 50px;
@@ -237,7 +237,7 @@ i {
   border-radius: 0;
   background: none;
   box-shadow: none;
-  padding: 0;  
+  padding: 0;
   border-bottom: 1px solid #444;
 }
 .form-control:focus {
@@ -257,34 +257,34 @@ i {
   border-radius: 2px;
   text-transform: uppercase;
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0.2s;  
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);  
+  transition-delay: 0.2s;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 .form .btn:active {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition-delay: 0s;  
+  transition-delay: 0s;
 }
 .form .btn:hover,
 .form .btn:focus {
-  background: #00bfae;    
+  background: #00bfae;
   outline: none;
 }
-.form-control::-webkit-input-placeholder { 
+.form-control::-webkit-input-placeholder {
   color: #444;
   font-size: 1.1em;
   text-transform: uppercase;
 }
-.form-control:-moz-placeholder { 
+.form-control:-moz-placeholder {
   color: #444;
   font-size: 1.1em;
   text-transform: uppercase;
 }
-.form-control::-moz-placeholder { 
+.form-control::-moz-placeholder {
   color: #444;
   font-size: 1.1em;
   text-transform: uppercase;
 }
-.form-control:-ms-input-placeholder { 
+.form-control:-ms-input-placeholder {
   color: #444;
   font-size: 1.1em;
   text-transform: uppercase;
@@ -311,7 +311,7 @@ i {
 .band-profile-container {
   padding: 25px;
   position: relative;
-  background: #f7f7f7;  
+  background: #f7f7f7;
 }
 .band-profile-header {
   background-size: cover !important;
@@ -331,7 +331,7 @@ i {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-transform: uppercase;  
+  text-transform: uppercase;
   color: #f5f6f7;
   font-size: 5.5em;
 }
@@ -342,7 +342,7 @@ i {
   margin-bottom: 30px
 }
 .band-discography-container {
-  text-align: center;  
+  text-align: center;
 }
 .band-discography-container ul {
   list-style: none;
