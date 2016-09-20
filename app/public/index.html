@@ -26,7 +26,7 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav pull-right">
-            <li ng-if="main.loggedIn" ng-controller="PlayerController" ng-cloak><button class="btn btn-primary ng-binding" ng-click="evaluate()">{{toggleText}}</button></li>
+            <li ng-controller="PlayerController" ng-cloak><i class="material-icons ng-binding" ng-click="evaluate()">{{toggleText}}</i></li>
             <li ng-if="main.loggedIn" ng-cloak><a href="agregar/musica">+</a></li>
             <li ng-if="main.loggedIn" ng-cloak><a href="stats">Stats</a></li>
             <li><a ng-class="{active: $route.current.activetab == 'bandas'}" href="bandas">Bandas</a></li>

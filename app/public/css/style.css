@@ -66,6 +66,13 @@ i {
   margin-left: 0;
   padding: 5px;
 }
+.navbar i {
+  top: 13px;
+  right: 5px;
+  position: relative; 
+  color: #444;
+  cursor: pointer;
+}
 .nav a {
   color: #444;
   text-transform: uppercase;
@@ -88,7 +95,9 @@ i {
   position: relative;
   margin-top: 62px;
   background: #f7f7f7;
-  height: calc(100% - 62px);    
+  min-height: 100%;
+  height: auto;
+    
 }
 
 .home-background {
@@ -96,7 +105,8 @@ i {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;  
+  background-size: cover;
+  height: calc(100% - 62px);
 }
 
 /* ENDS CONTAINER STYLES */
@@ -331,14 +341,34 @@ i {
   text-transform: uppercase;
   margin-bottom: 30px
 }
-.band-profile-container .bandcamp-embed {
-  border: 0;
-  width: 700px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 100%;
-  display: block;
+.band-discography-container {
+  text-align: center;  
 }
-
+.band-discography-container ul {
+  list-style: none;
+  display: inline-block
+}
+.band-discography-container ul li:hover  h1 {
+  opacity: .8;
+}
+.band-discography-container ul li h1 {
+  color: #f5f6f7;
+  position: absolute;
+  bottom: 0;
+  background: #000;
+  width: 100%;
+  padding: 5px;
+  font-size: 1em;
+  opacity: 0;
+}
+.band-discography-container ul li {
+  display: inline;
+}
+.band-discography-container .band-album {
+  margin: 5px;
+  position: relative;
+  height: 350px;
+  width: 350px;
+  display: inline-block;
+}
 /* ENDS BAND PROFILE STYLES */

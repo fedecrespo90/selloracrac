@@ -4,8 +4,19 @@
     <h1>{{banda.name}}</h1>
   </div>
   <div class="band-profile-container">
-    <p>{{banda.bio}}</p>
-    <!--iframe class="bandcamp-embed" src="bandcampSrc" seamless></iframe-->       
+    <p>{{banda.bio}}</p>   
   </div>
-  </div>
+  <div>
+  	<div class="band-discography-container">
+			<ul>
+				<li ng-repeat="b in banda.bandcamp">
+				  <a href="{{b.href}}" target="_blank" class="band-album" style="background: url(../images/{{banda.slug}}/{{b.image}})">
+		  			<div>
+					  <h1>{{b.name}}</h1>
+						</div>
+				  </a>
+			  </li>
+		  </ul>
+		 </div>
+  </div>  
 </div>

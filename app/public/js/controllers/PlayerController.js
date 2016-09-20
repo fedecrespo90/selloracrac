@@ -2,7 +2,7 @@ function PlayerController ($scope, ngAudio, musica) {
   var url = [];
   var j = 0;
   $scope.toggle = true;
-  $scope.toggleText = 'Play';
+  $scope.toggleText = 'play_arrow';
   musica.success(function(data){
     $scope.temas = data;
     for (var i = 0; i < $scope.temas.length; i++) {
@@ -12,10 +12,10 @@ function PlayerController ($scope, ngAudio, musica) {
     $scope.evaluate = function() {
       if($scope.audio.paused) {
         $scope.audio.play();
-        $scope.toggleText = 'Pause';
+        $scope.toggleText = 'pause';
       } else {
         $scope.audio.pause();
-        $scope.toggleText = 'Play';
+        $scope.toggleText = 'play_arrow';
       }
     }
     $scope.$watch('audio.progress', function(){
