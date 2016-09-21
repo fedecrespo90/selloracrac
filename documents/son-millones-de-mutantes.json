@@ -14,17 +14,17 @@
 		{
 			"name": "Era un dinosaurio",
 			"image":"millones3.jpg",
-			"href": "https://bandcamp.com/EmbeddedPlayer/album=3777659577/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+			"href": "https://racrac.bandcamp.com/album/era-un-dinosaurio"
 		},
 		{
 			"name":"Son millones de mutantes",
 			"image":"millones2.jpg",
-			"href":"https://bandcamp.com/EmbeddedPlayer/album=212988692/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+			"href":"https://racrac.bandcamp.com/album/son-millones-de-mutantes"
 		},
 		{
 			"name":"1915",
 			"image":"millones1.jpg",
-			"href":"https://bandcamp.com/EmbeddedPlayer/album=3461206056/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+			"href":"https://racrac.bandcamp.com/album/1915"
 		}
 	],
 	"ciudad": "Bahía Blanca"
