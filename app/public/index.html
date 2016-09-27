@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/loading-bar.css">
-    <link rel="image_src" ng-controller="BandController as banda" href="../images/{{banda.thumbnail}}">
+    <meta property="og:title" content="Sello RACRAC!" />
+    <meta property="og:description" content="Sello de bandas independientes." />
+    <meta property="og:image" content="../images/background.jpg" />
   </head>
   <body ng-controller="MainController as main">
     <nav class="navbar racrac-nav">
@@ -26,8 +28,9 @@
           </a>
         </div>
         <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav pull-right">
-            <li ng-controller="PlayerController" ng-cloak><i class="material-icons ng-binding" ng-click="evaluate()">{{toggleText}}</i></li>
+          <ul class="nav navbar-nav pull-right" ng-controller="PlayerController as play">
+            <li class="music-name" ng-if="main.loggedIn" ng-cloak><p>{{play.tema}}</p></li>
+            <li ng-cloak><i class="material-icons ng-binding" ng-click="play.evaluate()">{{play.toggleText}}</i></li>
             <li ng-if="main.loggedIn" ng-cloak><a href="agregar/musica">+</a></li>
             <li ng-if="main.loggedIn" ng-cloak><a href="stats">Stats</a></li>
             <li><a ng-class="{active: $route.current.activetab == 'bandas'}" href="bandas">Bandas</a></li>

@@ -63,7 +63,9 @@ saveName = function(req, res, name) {
 
 exports.item = function(req, res, next) {
   var filePath = path.join(__dirname, '../uploads/');
-  res.sendFile(filePath+req.params.name);
+  var extension = '.mp3';
+  var file = filePath+req.params.name+extension;
+  res.sendFile(file);
 
   // fs.readdir(filePath, function(err, filenames) {
   //   if (err) {
@@ -99,7 +101,7 @@ exports.list = function(req, res) {
   fs.readdir(filePath, function(err, filenames) {
     for (var i = 0; i < filenames.length; i++) {
       if(path.extname(filenames[i]) == '.mp3') {
-        list[i] = filenames[i];
+        list[i] = filenames[i].slice(0, -4);
       }
     }
     if (err) {

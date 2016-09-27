@@ -372,3 +372,8 @@ i {
   display: inline-block;
 }
 /* ENDS BAND PROFILE STYLES */
+
+.music-name {
+  margin-top: 15px;
+  margin-right: 10px;
+}

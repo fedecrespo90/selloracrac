@@ -1,33 +1,45 @@
 function PlayerController ($scope, ngAudio, musica) {
-  var url = [];
+  var vm = this;
+  vm.audioTrack = '';
+  vm.url = [];
+  vm.temas = [];
+  vm.tema = '';
   var j = 0;
-  $scope.toggle = true;
-  $scope.toggleText = 'play_arrow';
-  musica.success(function(data){
-    $scope.temas = data;
-    for (var i = 0; i < $scope.temas.length; i++) {
-      url[i] = 'api/musica/'+$scope.temas[i];
+  vm.toggle = true;
+  vm.toggleText = 'play_arrow';
+  musica.success(function(data) {
+    vm.temas = data;
+    for (var i = 0; i < vm.temas.length; i++) {
+      vm.url[i] = 'api/musica/'+vm.temas[i];
     }
-    $scope.audio = ngAudio.load(url[j]);
-    $scope.evaluate = function() {
-      if($scope.audio.paused) {
-        $scope.audio.play();
-        $scope.toggleText = 'pause';
+    vm.audio = ngAudio.load(vm.url[j]);
+    vm.evaluate = function() {
+      if(vm.audio.paused) {
+        vm.tema = vm.temas[j];
+        vm.audio.play();
+        vm.toggleText = 'pause';
       } else {
-        $scope.audio.pause();
-        $scope.toggleText = 'play_arrow';
+        vm.audio.pause();
+        vm.toggleText = 'play_arrow';
       }
     }
-    $scope.$watch('audio.progress', function(){
-      if($scope.audio.progress === 1) {
-        j++;
-        if(j === $scope.temas.length) {
-          j = 0;
+    $scope.$watch(
+      function() {
+        return vm.audio.progress;
+      },
+      function() {
+        if(vm.audio.progress === 1) {
+          j++;
+          vm.tema = vm.temas[j];
+          if(j === vm.temas.length) {
+            j = 0;
+            vm.tema = vm.temas[j];
+          }
+          vm.audio = ngAudio.load(vm.url[j]);
+          vm.audio.play();
         }
-        $scope.audio = ngAudio.load(url[j]);
-        $scope.audio.play();
       }
-    })
+    );
   });
 }
 
